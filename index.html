@@ -7,12 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--<link href="w3b.css" rel="stylesheet"/>-->
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--<script src="w3b.js"></script>-->
+
+
+    
 </head>
 <!--
     NOTES:
@@ -41,14 +46,11 @@
                         <a class="nav-link" href="#" id="hom">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Our Customers</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#about">About Us</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbrandsdrop" data-toggle="dropdown">
-                            Our Brands
+                            Brands
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#imgBradford">Bradford Gold</a>
@@ -58,25 +60,21 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navinsulationdrop" data-toggle="dropdown">
-                            Insulation
+                        <a class="nav-link dropdown-toggle" href="#" id="navproductsdrop" data-toggle="dropdown">
+                            Products
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#ceilingIns">Ceiling</a>
-                            <a class="dropdown-item" href="#underfloorIns">Underfloor</a>
+                            <a class="dropdown-item" href="#ceilingIns">Ceiling Insulation</a>
+                            <a class="dropdown-item" href="#underfloorIns">Underfloor Insulation</a>
+                            <a class="dropdown-item" href="#imgToshiba">Heat Pumps</a>
+                            <a class="dropdown-item" href="#imgSmartVent">Ventilation</a>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#imgToshiba">Heat Pumps</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#imgSmartVent">Ventilation</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#supply">Supply&Install</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#partners">Our Partners</a>
+                        <a class="nav-link" href="#partners">Partners</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#ftContact">Contact Us</a>
@@ -85,6 +83,16 @@
             </div>
         </nav>
         <br>
+
+        <!--Hero image/section
+        <div class="jumbotron jumbotron-fluid" id="heroLocation">-->
+            <div class="container">
+                <img class="img-fluid" src="/home/buhle/Websites/w3bootstrap-21/images/8bitHero1.png" 
+                alt="on premises view"> <!--width="460" height="345"-->
+              <!--<h1 class="display-4">Fluid jumbotron</h1>
+              <p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>-->
+            </div>
+          <!--</div>-->
 
         <!--WIP -->
         <div class="container-xl" id="customers">
@@ -117,12 +125,12 @@
                                 <!--div class"testimonials"-->
                                 <div class="col-md-12 text-center">
                                     <p>&#10077;House much more comfortable now and the boys did a really good
-                                        job.&#10078;
-                                        <span
+                                        job.&#10078; Guy Rasmussen, Te Aroha.
+                                       <!--<span
                                             style="color:rgba(255,0,0,1.0); font: small bold; font-style: italic; margin:5px">
                                             Guy Rasmussen, Te Aroha.
                                         </span>
-                                        <br>Underfloor Insulation - 6 August 2020
+                                        Underfloor Insulation - 6 August 2020-->
                                     </p>
                                 </div>
                             </div>
@@ -131,12 +139,12 @@
                             <div class="header-text hidden-xs">
                                 <!--div class"testimonials"-->
                                 <div class="col-md-12 text-center">
-                                    <p>&#10077;Very happy with service installing the heat pump.&#10078;
-                                        <span
+                                    <p>&#10077;Very happy with service installing the heat pump.&#10078; Rodney Burch, Hamilton.
+                                        <!--<span
                                             style="color:rgba(255,0,0,1.0); font: small bold; font-style: italic; margin:5px">
                                             Rodney Burch, Hamilton.
                                         </span>
-                                        <br>Heat pump - 13 August 2020
+                                        Heat pump - 13 August 2020-->
                                     </p>
                                 </div>
                             </div>
@@ -146,11 +154,11 @@
                                 <!--div class"testimonials"-->
                                 <div class="col-md-12 text-center">
                                     <p>&#10077;Thank you for prompt and efficient service when installing insulation in
-                                        our home.&#10078;
-                                        <span
+                                        our home.&#10078; Ron & Elaine Keen, Palmerston North.
+                                        <!--<span
                                             style="color:rgba(255,0,0,1.0); font: small bold; font-style: italic; margin:5px">
                                             Ron & Elaine Keen, Palmerston North.
-                                        </span>
+                                        </span>-->
                                     </p>
                                 </div>
                             </div>
@@ -170,16 +178,25 @@
         <!--TO DO -->
         <div class="container-md">
             <h2>About Us</h2>
-            <!--1 row 4 equal columns-->
+            <!--1 row 3 equal columns-->
             <div class="row">
                 <div class="col-sm-4">
-                    <h3>Owned and operated</h3>
+                    <h3><strong>Owned and operated</strong></h3>
+                    <p class="w3-theme-l1 w3-center w3-section w3-large w3-padding" id="aboutp1">
+                        Based in New Plymouth. Operating throughout Taranaki, the Waikato and Manawatu.
+                    </p>
                 </div>
                 <div class="col-sm-4">
-                    <h3>Free assessments</h3>
+                    <h3><strong>Offering Free Assessments</strong></h3>
+                    <p class="w3-theme-l1 w3-center w3-section w3-large w3-padding" id="aboutp2">
+                        Insulation <br> Heat Pumps/Air Conditioning Units <br> Home Ventilation Systems
+                    </p>
                 </div>
                 <div class="col-sm-4">
-                    <h3>Choice of Installation</h3>
+                    <h3><strong>Your Choice of Installation</strong></h3>
+                    <p class="w3-theme-l1 w3-center w3-section w3-large w3-padding" id="aboutp3">
+                        DIY with our SUPPLY ONLY option <br> OR <br> let us supply and install for you.
+                    </p>
                 </div>
             </div>
         </div>
