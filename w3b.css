@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(//fonts.googleapis.com/css?family=Open+Sans);
+/*@import url(//fonts.googleapis.com/css?family=Open+Sans);*/
 
 #heroLocation {
     color: white;
@@ -11,6 +11,19 @@
     width:auto;
   }
 
+  /* MIGHT NEED THIS - TO CONTROL OVERFLOW OF ELEMENTS INSIDE OF CONTAINER*/ 
+  .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
+  
+    
+  /* Make the image fully responsive */
+    .carousel-inner #testimonial {
+      width: 100%;
+      height: 100%;
+    }
 /* asterix represents all HTML elements */
 *{
     margin: 0;
@@ -46,156 +59,7 @@ input { font-size: inherit; font-family: inherit; }
 footer { font-size: 0.8em; padding: 1rem; }
 /* END Ref: https://bits.theorem.co/css-pro-tips-responsive-font-sizes-and-when-to-use-which-units/*/
 
-header {
-    position: relative;
-    /*max-width: 200px;  Maximum width */
-    margin: 0; /* Center it*/
-    /* center and scale image */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
-nav{
-  margin: auto;
-  text-align: center;
-  /*text-align: relative;
-  position: relative;*/
-  padding-left: 20%;
-  padding-right: 20%;
-}
-
-#topNav {
-  overflow: hidden;
-  position: relative;
-}
-
-#back2top {
-    display: inline-block; 
-    position: fixed;
-    bottom: 60px;
-    left: inherit; /*-calc(542 / 980 * 100%)*/
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    z-index: 999; 
-    color: #F56C27;
-    color:  rgba(245,180,39,0.9);
-    background-color: #566374;
-    background: rgba(86,99,116,1) url("images/up-arrow.png") no-repeat center 43%;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    border-radius: 40px;
-    }
-
-.testimonials{
-    width: 100%;
-    display: none;
-    overflow: auto; 
-}
-
-#custSay {
-  max-width: 100%;
-  min-height: 100px; 
-  position: relative;
-  height: 0;
-  padding-top: calc(413.567 / 1809 * 100%);  
-}
-
-p.testimonials {
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  height: auto; 
-}
-/* REF: https://itnext.io/how-to-stop-content-jumping-when-images-load-7c915e47f576
-*/
-#partners {
-  margin: 0 auto;
-}
-
-#mitre10 {
-  margin: 0 auto;
-  max-width: 410px;
-  max-height: 70px;
-}
-
-#millsgibbon{
-  word-break: normal; 
-  max-width: 410px;
-  max-height: 70px;
-}
-
-#toolong1, #toolong2 {
-  word-wrap: break-word;
-}
-
-#locationEntrance   {
-  height: calc(480 × ( 1440 ÷ 925) ); /*display_height = img_height × ( display_width ÷ img_width ) */
-}
-/* facebook icon*/
-.fab {
-  padding: 0px;
-  font-size: 30px;
-  /*width: 50px;*/
-  text-align: center;
-  text-decoration: none;
-  margin: 0px;
-}
-
-.fab:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-} 
-
-@media only screen and (max-width: 320px) {
-  #mitre10, #millsgibbon, #toolong1, #toolong2 {
-    font-size: medium;
-  word-wrap: break-word;
-  }  
-}
-@media only screen and (max-width: 568px) {
-  #toolong3 {
-    padding-top:70px;
-  }
-}
-
-@media only screen and (max-width: 480px) and (orientation: portrait) { /*414px*/
-  #custSay {
-    max-width: 100%;
-    min-height: 300px; 
-    position: relative;
-    height: 0;
-    padding-top: calc(297 / 932 * 100%);  
-  }
-  p.testimonials {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    height: auto; 
-  }
-  #collapse {
-    display: none;
-    overflow: hidden;
-  }
-}
-
-@media only screen and (min-width: 500px) and (orientation: landscape) {
-  #shrink {
-    float: right;
-    margin: 0;
-    padding: 0;
-  }
-  #hom {
-    float: left;
-  }
-}
 /*from signage board*/
 .w3-theme-l5 {color:#000 !important; background-color:#fbfcfc !important}
 .w3-theme-l4 {color:#000 !important; background-color:#f3f4f6 !important}
