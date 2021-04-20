@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--TO DO: 
+    1. CALL-TO-ACTION inside navbar
+    2. IYW COLOUR SCHEME
+    3. REVIEWS
+ -->
+
 <head>
-    <title>Insulation Your Way - new website</title>
+    <title>Insulation Your Way Ltd</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
@@ -15,9 +21,6 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!--<script src="w3b.js"></script>-->
-
-
-
 </head>
 <!--
     NOTES:
@@ -31,8 +34,8 @@
         <!-- my-3 border-->
         <!-- width always 100%, 15px L& R padding 0px top & bottom. pt-3 adds 16px top padding-->
 
-        <!--Navigation-->
-        <nav class="container-sm navbar navbar-expand-md bg-light navbar-light sticky-top">
+        <!--Navigation container-md couldn't fit CTA button-->
+        <nav class="jumbotron-fluid navbar navbar-expand-md bg-light navbar-light sticky-top">
             <!--change colours. NOTE: sticky-top in >=IE11 is treated as position:relative-->
             <a class="navbar-brand" href="#">
                 <img src="images/logo/IYW2.png" alt="IYW_Logo" style="width: 12vw;">
@@ -41,7 +44,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <div class="collapse navbar-collapse float-right-sm" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="#" id="hom">Home</a>
@@ -81,8 +84,9 @@
                         <a class="nav-link" href="#ftContact">Contact</a>
                     </li>
                 </ul>
-            </div>
-        </nav>
+            </div>            
+            <a href="#ftcontact" class="btn btn-outline-info active text-nowrap btn-sm" role="button">Call Now</a>                                      
+        </nav>         
         <br>
 
         <!--Hero image/section-->
@@ -95,15 +99,15 @@
         </div>
         <br>
 
-        <!--TESTIMONIALS - WIP: centering of shorter quotes-->
-        <div class="container-lg text-center p-3  border border-success" id="customers">
+        <!--TESTIMONIALS - WIP: centering of shorter quotes JUMPING-->
+        <div class="container-lg text-center p-3" id="customers">
             <!--jumbotron-->
             <!--.js change to id-->
             <h2 class="p-3">Customers say:</h2><!-- class="p-3"-->
             <!--carousel-->
             <div class="row">
                 <div id="testimonial" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
+                    <!-- Indicators 
                     <ul class="carousel-indicators">
                         <li data-target="#testimonial" data-slide-to="0" class="active"></li>
                         <li data-target="#testimonial" data-slide-to="1"></li>
@@ -118,10 +122,9 @@
                         <li data-target="#testimonial" data-slide-to="10"></li>
                         <li data-target="#testimonial" data-slide-to="11"></li>
                         <li data-target="#testimonial" data-slide-to="12"></li>
-                    </ul>
-
+                    </ul>-->
                     <!-- The slideshow -->
-                    <div class="carousel-inner text-lg-center text-success">
+                    <div class="carousel-inner text-center text-success">
                         <!--clearfix-->
                         <!--adds slides to carosel-->
                         <div class="carousel-item active">
@@ -247,20 +250,19 @@
                 </div>
             </div>
         </div>
-        <!-- Left and right controls -->
+        <!-- Left and right controls
         <a class="carousel-control-prev" href="#testimonial" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </a>
         <a class="carousel-control-next" href="#testimonial" data-slide="next">
             <span class="carousel-control-next-icon"></span>
-        </a>
+        </a> -->
         </div>
     <br>
 
     <!--About Us Section-->
-    <div class="container-lg text-center p-3 border border-danger" id="about">
+    <div class="container-xl text-center p-3" id="about">
         <h2 class="pt-3">About Us</h2>
-        <!--1 row 3 equal columns-->
         <div class="row">
             <div class="col-sm-4">
                 <h6 class="p-3"><strong>Locally Owned and operated</strong></h6>
@@ -277,20 +279,20 @@
             <div class="col-sm-4">
                 <h6 class="p-3"><strong>Your Choice of Installation</strong></h6>
                 <p class="p-1" id="aboutp3">
-                    DIY with our SUPPLY ONLY option <br> OR <br> let us supply and install for you.
+                    DIY with our SUPPLY ONLY option <br> OR <br> Let <em>us</em> supply and install for you.
                 </p>
             </div>
         </div>
     </div>
 
-    <!--TO DO: Our Brands Section-->
-    <div class="container-lg text-center p-3 border border-primary">
+    <!--TO DO: Our Brands Section--> 
+    <div class="container-xl text-center p-3 border border-primary" id="brands"> <!--switch to be jumborn-fluid instead-->
         <h2 class="p-3 mb-3">Our Brands</h2>
         <!--1 row 4 equal columns-->
     </div>
 
     <!--TO DO: Our Partners Section-->
-    <div class="container-md text-center p-3 border border-danger">
+    <div class="container-md text-center p-3 border border-danger" id="partners">
         <h2 class="p-3 mb-3">Our Partners</h2>
         <div class="row">
             <div class="col-sm-8">Metcalfe Real Estate</div>
@@ -302,49 +304,82 @@
         </div>
     </div>
 
-    <!--TO DO: Supply and Install Section-->
-    <div class="container-lg text-center p-3 border border-dark"> <!--jumbotron-->
+    <!--DONE: Supply and Install Section-->
+    <div class="container-lg text-center p-3" id="supply"><!-- border border-dark-->
         <h2 class="p-3 mb-3">Supply and Install</h2>
-        <!--4-6 rows 2 unequal columns-->
-        <p class="text-break">When you purchase <mark>insulation, heat pumps, or ventilation</mark>from us, you are
-            guaranteed that your insulation comes from long established NZ companies.</p>
         <div class="row">
-            <div class="col-sm-5">
-                <h4>Supply Only</h4>
-            </div>
-            <!--display-4-->
-            <div class="col-sm-7">
-                <h4>Supply and Install</h4>
-            </div>
+            <p class="text-break">When you purchase <mark>insulation, heat pumps, or ventilation</mark>from us, you are
+                guaranteed that your insulation comes from long established NZ companies.
+            </p>
         </div>
+        <!--heaading in different colours!!-->
+            <h5 class="p-3">Choose an <em>InsulationYOURWay</em> option</h5>
+            <div class="row">
+                <div class="col-sm-5">
+                    <h6 class="p-3"><strong><em>Supply Only&#58;</em></strong></h6>
+                    <p class="pb-sm3">Pick up and install <strong>yourself.</strong></p>
+                </div>
+                <!--display-4-->
+                <div class="col-sm-7">
+                    <h6 class="p-3"><strong><em>Supply and Install&#58;</em></strong></h6>
+                    <p class="mb-sm3"><strong>We</strong> install for you, using our ECCA recognised, NZ qualified installer.</p>
+                </div>
+            </div>      
+    </div>
+
+    <!--Reviews app-->
+    <div class="container-xl border border-dark">
+        <div class="display-5" id="reviews">Reviews app</div>
     </div>
 
     <!--TO DO: Footer-->
-    <div class="container-lg text-center p-3 border border-info">
-        <h2 class="p-3 mb-3">Footer</h2><!-- 1 row 4 unequal columns-->
-        <div class="row">
-            <div class="col-sm-4">Warm Up NZ</div>
-            <div class="col-sm-8">
-                <div class="row">
-                    <div class="col-sm-4">Home</div>
-                    <div class="col-sm-4">Our Brands</div>
-                    <div class="col-sm-4">Contact Us</div>
-                </div>
+    <div class="jumbotron jumbotron-fluid text-center p-3">
+        <h2 class="p-3 mb-3">Footer</h2>
+        <!--<div class="col-sm-4 border border-success">Warm Up NZ</div>
+            div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-4">Home</div>
+                <div class="col-sm-4">Our Brands</div>
+                <div class="col-sm-4">Contact Us</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">About Us</div>
+                <div class="col-sm-4">Our Products</div>
+                <div class="col-sm-4 border border-secondary">FaceBook icon</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">Our Partners</div>
+                <div class="col-sm-4">Supply and Install</div>
+                <div class="col-sm-4 border border-secondary">FaceBook icon</div>
             </div>
         </div>
-        <div class="row">
-            <p class="bg-info text-white-50">2021 InsulationYOURway™. All rights reserved.</p> <!-- text-info-->
+    </div>-->
+    <div class="row p-4">
+        <div class="col-sm-3 border border-success">Warm Up NZ</div>
+    
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-6"><a href="#">Home</a></div>
+                <div class="col-sm-6"><a href="#brands">Brands</a></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6"><a href="#about">About</a></div>
+                <div class="col-sm-6">Products</div>
+            </div><!--CUSTOMERS?-->
+            <div class="row">
+                <div class="col-sm-6"><a href="#partners">Partners</a></div>
+                <div class="col-sm-6"><a href="#supply">Supply&#38;Install</a></div>
+            </div>
         </div>
-        <!--<div class="row">
-            <div class="col-sm-4">Our Customers</div>
-            <div class="col-sm-4">Our Partners</div>
-            <div class="col-sm-4">????????????</div>
+        <div class="col-sm-3">
+            <div class="col-sm-6" id="ftcontact">Contact</div><!--button-->
+            <div class="col-sm-6" id="social">FaceBook</div><!--fav icon-->
         </div>
-        <div class="row">
-            <div class="col-sm-6">About Us</div>
-            <div class="col-sm-6">Supply and Install</div>
-        </div> -->
     </div>
-</body>
+    <div class="row pt-5">
+        <p class="text-info text-dark-50 text-monospace mx-auto"><small>2018-2021 InsulationYOURway™. All rights reserved.</small>
+        </p>
+    </div>
+    </div>
 
 </html>
