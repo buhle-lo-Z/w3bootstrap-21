@@ -37,7 +37,8 @@
         <!--Navigation container-md couldn't fit CTA button-->
         <nav class="jumbotron-fluid navbar navbar-expand-xl bg-light navbar-light sticky-top">
             <!--change colours. NOTE: sticky-top in >=IE11 is treated as position:relative-->
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand flex-grow-1" href="#">
+                <!-- brand grows to fill available space-->
                 <img src="images/IYW2.png" alt="IYW_Logo" style="width: 18vw;">
                 <!--60px-->
             </a>
@@ -45,8 +46,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav d-flex flex-row">
-                    <!--float-xl-right-->
+                <ul class="navbar-nav d-flex flex-row justify-content-end">
+                    <!--float-xl-right -->
                     <li class="nav-item active">
                         <a class="nav-link" href="#" id="hom">Home</a>
                     </li>
@@ -107,7 +108,7 @@
             <!--.js change to id-->
             <h2 class="p-3">Customers say:</h2><!-- class="p-3"-->
             <!--carousel-->
-            <div class="row">
+            <div class="row d-flex justify-content-center">
                 <div id="testimonial" class="carousel slide" data-ride="carousel">
                     <!-- Indicators 
                     <ul class="carousel-indicators">
@@ -287,114 +288,197 @@
         </div>
     </div>
 
-    <!--TO DO: Our Brands Section-->
-    <div class="jumbotron-fluid text-center p-3" id="brands">
-        <!--switch to be jumborn-fluid instead container-xl-->
-        <div class="row"> 
-            <div class="col-sm-6">
-                <h2 class="p-3 mb-3">Our Brands</h2>
-                <div class="row">
-                    <div class="card-columns">
-                        <div class="card-body text-center">
-                            <a href="javascript:void(0)" onclick="displayNotes('Bradford')">
-                                <!--class="w3-hover-opacity"-->
-                                <picture>
-                                    <source type="image/webp" srcset="images/bradfordgoldOri_1133colorspace.webp">
-                                    <source type="image/jpeg" srcset="images/bradfordgoldOri_1133colorspace.jpg">
-                                    <img src="images/bradfordgoldOri_1133.jpg" alt="Bradford ceiling insulation"
-                                        class="img-fluid img-thumbnail rounded" id="imgBradford">
-                                </picture><!--<br>-->
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="javascript:void(0)" onclick="displayNotes('Toshiba')">
-                                <picture>
-                                    <source type="image/webp" srcset="images/Toshiba_1500.webp">
-                                    <source type="image/jpeg" srcset="images/Toshiba_1500.jpg">
-                                    <img src="images/Toshiba_1500.jpg" alt="Toshiba heat pump" 
-                                    class="img-fluid img-thumbnail rounded" id="imgToshiba">
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="javascript:void(0)" onclick="displayNotes('Mammoth')">
-                                <picture>
-                                    <source type="image/webp" srcset="images/MammothW_1500.webp">
-                                    <source type="image/jpeg" srcset="images/MammothW_1500.jpg">
-                                    <img src="images/MammothW_1500.jpg" alt="Mammoth underfloor insulation"
-                                        class="img-fluid img-thumbnail rounded" id="imgMammoth">
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="card-body text-center">
-                            <a href="javascript:void(0)" onclick="displayNotes('Smartvent')"><!--class=""-->
-                                <picture>
-                                    <source type="image/webp" srcset="images/SmartVentTagLineOri_1478.webp">
-                                    <source type="image/jpeg" srcset="images/SmartVentTagLineOri_1478.jpg">
-                                    <img src="images/SmartVentTagLineOri_1478.jpg" alt="SmartVent Tag Line"
-                                        class="img-fluid img-thumbnail rounded" id="imgSmartVent">
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <!--images DONE: Our Brands Section. TO DO: IMAGE LINKS-->
+    <div class="container-xl text-center py-3" id="brands">
+        <!--<div class="container-xl"></div>row
+            <div class="col-sm-6">-->
+        <h2 class="p-3 mb-3">Our Brands</h2>
+        <div class="card-columns">
+            <div class="card-body">
+                <a href="javascript:void(0)" onclick="displayNotes('Bradford')">
+                    <picture>
+                        <source type="image/webp" srcset="images/bradfordgoldOri_1133colorspace.webp">
+                        <source type="image/jpeg" srcset="images/bradfordgoldOri_1133colorspace.jpg">
+                        <img src="images/bradfordgoldOri_1133.jpg" alt="Bradford CEILING insulation"
+                            class="img-fluid img-thumbnail rounded" id="imgBradford">
+                    </picture>
+                </a>
             </div>
-
-            <div class="col-sm-6">
-                <h2 class="p-3 mb-3">Our Partners</h2>
-                <div class="row">
-                    <div class="card-columns">
-                        <div class="card-body text-center">
-                            <picture>
-                                <source type="image/webp" srcset="images/Metcalfe_1800.webp">
-                                <source type="image/jpeg" srcset="images/Metcalfe_1800.jpg">
-                                <img srcset="
-                                images/MetcalfeOri_2000.jpg 2000w,
-                                images/Metcalfe_1800.jpg 1800w,
-                                images/Metcalfe_1500.jpg 1500w,
-                                images/Metcalfe_1000.jpg 1000w
-                                "
-                                src="images/Metcalfe_1800.jpg" sizes="(max-width: 320px) 50vw, 
-                                (min-width: 321px) and (max-width: 960px) calc(30vw - 40px), 100vw" alt="business partner Metcalfe"
-                                  class="w3-image" id="imgMetcalfe" style="width:100%;">
-                              </picture>
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 id="millsgibbon" class="w3-larger w3-wide w3-text-white"><strong>First National &#8208;
-                                Mills&amp;Gibbon</strong></h3>
-                                <hr>
-                                <p class="w3-center w3-mobile w3-text-orange" id="toolong1">
-                                    We install insulation, heat pumps and bathroom fans in their rental properties
-                                  </p>
-                        </div>
-                        <div class="card-body text-center">
-                            <picture>
-                                <source type="image/webp" srcset="images/HarcourtsOri_1183.webp">
-                                <source type="image/jpeg" srcset="images/HarcourtsOri_1183.jpg">
-                                <img srcset="
-                                images/HarcourtsOri_1183.jpg 1183w,
-                                images/Harcourts_1000.jpg 1000w
-                                " src="images/HarcourtsOri_1183.jpg" sizes="(max-width: 320px) 50vw, 
-                                (min-width: 321px) and (max-width: 960px) calc(30vw - 40px), 100vw" alt="business partner Harcourts"
-                                  class="w3-image" id="imgHarcourts" style="width:100%;">
-                              </picture>
-                        </div>
-                        <div class="card-body text-center">
-                            <h3 id="mitre10" class="w3-larger w3-wide w3-text-white"><strong>Mitre10</strong></h3>
-                            <hr><p class="w3-center w3-mobile w3-text-orange" id="toolong2">
-                                We have a strong working relationship as a recommended installer
-                              </p>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="card-body">
+                <a href="javascript:void(0)" onclick="displayNotes('Mammoth')">
+                    <picture>
+                        <source type="image/webp" srcset="images/MammothW_1500.webp">
+                        <source type="image/jpeg" srcset="images/MammothW_1500.jpg">
+                        <img src="images/MammothW_1500.jpg" alt="Mammoth UNDERFLOOR insulation"
+                            class="img-fluid img-thumbnail rounded" id="imgMammoth">
+                    </picture>
+                </a>
+            </div>
+            <div class="card-body">
+                <a href="javascript:void(0)" onclick="displayNotes('Smartvent')">
+                    <picture>
+                        <source type="image/webp" srcset="images/SmartVentTagLineOri_1478.webp">
+                        <source type="image/jpeg" srcset="images/SmartVentTagLineOri_1478.jpg">
+                        <img src="images/SmartVentTagLineOri_1478.jpg" alt="SmartVent VENTILATION"
+                            class="img-fluid img-thumbnail rounded" id="imgSmartVent">
+                    </picture>
+                </a>
+            </div>
+            <div class="card-body">
+                <a href="javascript:void(0)" onclick="displayNotes('Toshiba')">
+                    <picture>
+                        <source type="image/webp" srcset="images/Toshiba_1500.webp">
+                        <source type="image/jpeg" srcset="images/Toshiba_1500.jpg">
+                        <img src="images/Toshiba_1500.jpg" alt="Toshiba heat pump"
+                            class="img-fluid img-thumbnail rounded" id="imgToshiba">
+                    </picture>
+                </a>
             </div>
         </div>
-        
-
     </div>
 
-    <!--TO DO: Our Partners Section
+    <!--DONE: Supply and Install Section container-xl-->
+    <div class="jumbotron jumbotron-fluid text-center p-3" id="supply">
+        <h2 class="p-3 mb-3">Supply and Install</h2>
+            <p class="text-break align-content-center">When you purchase <mark>insulation, heat pumps, or ventilation</mark>
+                from us, you are guaranteed that your insulation comes from long established NZ companies.
+            </p>
+        <h5 class="p-3">Choose an <em>InsulationYOURWay</em> option</h5>
+        <div class="row">
+            <div class="col-sm-5">
+                <h6 class="p-3"><strong><em>Supply Only&#58;</em></strong></h6>
+                <p class="pb-sm3">Pick up and install <strong>yourself.</strong></p>
+            </div>
+            <!--display-4-->
+            <div class="col-sm-7">
+                <h6 class="p-3"><strong><em>Supply and Install&#58;</em></strong></h6>
+                <p class="mb-sm3"><strong>We</strong> install for you, using our ECCA recognised, NZ qualified
+                    installer.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--DONE: Partners-->
+    <div class="container-xl text-center p-3" id="partners">
+        <h2 class="p-3 mb-3">Our Partners</h2>
+        <div class="card-columns">
+                <div class="card-body">
+                    <h5 class="card-title text-center" id="millsgibbon"><strong>First
+                            National&#8208;Mills&amp;Gibbon</strong>
+                    </h5>
+                    <p class="card-text justify-content-center" id="toolong1">
+                        We install insulation, heat pumps and bathroom fans in their rental properties
+                    </p>
+                </div>
+                <div class="card-body">
+                    <picture>
+                        <source type="image/webp" srcset="images/Metcalfe_1800.webp">
+                        <source type="image/jpeg" srcset="images/Metcalfe_1800.jpg">
+                        <img srcset="
+                                    images/MetcalfeOri_2000.jpg 2000w,
+                                    images/Metcalfe_1800.jpg 1800w,
+                                    images/Metcalfe_1500.jpg 1500w,
+                                    images/Metcalfe_1000.jpg 1000w
+                                    " src="images/Metcalfe_1800.jpg" sizes="(max-width: 320px) 50vw, 
+                                    (min-width: 321px) and (max-width: 960px) calc(30vw - 40px), 100vw"
+                            alt="business partner Metcalfe" class="img-fluid img-thumbnail rounded" id="imgMetcalfe"
+                            style="width:100%;">
+                    </picture>
+                </div>
+                <div class="card-body">
+                    <picture>
+                        <source type="image/webp" srcset="images/HarcourtsOri_1183.webp">
+                        <source type="image/jpeg" srcset="images/HarcourtsOri_1183.jpg">
+                        <img srcset="
+                                    images/HarcourtsOri_1183.jpg 1183w,
+                                    images/Harcourts_1000.jpg 1000w
+                                    " src="images/HarcourtsOri_1183.jpg" sizes="(max-width: 320px) 50vw, 
+                                    (min-width: 321px) and (max-width: 960px) calc(30vw - 40px), 100vw"
+                            alt="business partner Harcourts" class="img-fluid img-thumbnail rounded" id="imgHarcourts"
+                            style="width:100%;">
+                    </picture>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center pt-3" id="mitre10"><strong>Mitre10</strong></h5>
+                    <p class="card-text justify-content-center" id="toolong2">
+                        We have a strong working relationship as a recommended installer
+                    </p>
+                </div>
+            
+        </div>
+    </div>
+    </div>
+
+    <!--Reviews app-->
+    <div class="container-xl border border-dark py-5 my-5">
+        <div class="display-5" id="reviews">Reviews app</div>
+    </div>
+
+    <!--TO DO: Footer-->
+    <div class="jumbotron jumbotron-fluid text-center pt-5">
+         <!--<h2 class="p-3 ">Footer</h2>
+       <div class="col-sm-4 border border-success">Warm Up NZ</div>
+            div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-4">Home</div>
+                <div class="col-sm-4">Our Brands</div>
+                <div class="col-sm-4">Contact Us</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">About Us</div>
+                <div class="col-sm-4">Our Products</div>
+                <div class="col-sm-4 border border-secondary">FaceBook icon</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">Our Partners</div>
+                <div class="col-sm-4">Supply and Install</div>
+                <div class="col-sm-4 border border-secondary">FaceBook icon</div>
+            </div>
+        </div>
+    </div>-->
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-3">
+                <picture>
+                    <source type="image/webp" srcset="images/warmupNZori.webp">
+                    <source type="image/jpeg" srcset="images/warmupNZori.jpg">
+                    <img src="images/warmupNZori.jpg" alt="Warm Up NZ"
+                        class="img-fluid img-thumbnail rounded pt-3" id="imgWarmUp">
+                </picture>
+            </div>
+            <div class="col-sm-6">
+                <div class="row d-flex justify-content-sm-around">
+                    <div class="col-sm-6"><a href="#">Home</a></div>
+                    <div class="col-sm-6"><a href="#brands">Brands</a></div>
+                </div>
+                <div class="row d-flex justify-content-sm-around">
+                    <div class="col-sm-6"><a href="#about">About</a></div>
+                    <div class="col-sm-6">Products</div>
+                </div>
+                <!--CUSTOMERS?-->
+                <div class="row d-flex justify-content-sm-around">
+                    <div class="col-sm-6"><a href="#partners">Partners</a></div>
+                    <div class="col-sm-6"><a href="#supply">Supply&#38;Install</a></div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="col-sm-6" id="ftcontact">Contact</div>
+                <!--button-->
+                <div class="col-sm-6" id="social">FaceBook</div>
+                <!--fav icon-->
+            </div>
+        </div>
+        <div class="row pt-2">
+            <p class="text-info text-dark-50 text-monospace mx-auto"><small>2018-2021 InsulationYOURway™. All rights
+                    reserved.</small>
+            </p>
+        </div>
+    </div>
+
+</html>
+
+
+
+<!--TO DO: Our Partners Section
         
         </div>
         <div class="w3-half w3-mobile s3 w3-panel w3-round-large w3-theme-d3">
@@ -432,89 +516,3 @@
             <div class="col-sm-4">Mitre10</div>
         </div>
     </div>-->
-
-    <!--DONE: Supply and Install Section-->
-    <div class="container-lg text-center p-3" id="supply">
-        <!-- border border-dark-->
-        <h2 class="p-3 mb-3">Supply and Install</h2>
-        <div class="row">
-            <p class="text-break">When you purchase <mark>insulation, heat pumps, or ventilation</mark>from us, you are
-                guaranteed that your insulation comes from long established NZ companies.
-            </p>
-        </div>
-        <!--heading in different colours!!-->
-        <h5 class="p-3">Choose an <em>InsulationYOURWay</em> option</h5>
-        <div class="row">
-            <div class="col-sm-5">
-                <h6 class="p-3"><strong><em>Supply Only&#58;</em></strong></h6>
-                <p class="pb-sm3">Pick up and install <strong>yourself.</strong></p>
-            </div>
-            <!--display-4-->
-            <div class="col-sm-7">
-                <h6 class="p-3"><strong><em>Supply and Install&#58;</em></strong></h6>
-                <p class="mb-sm3"><strong>We</strong> install for you, using our ECCA recognised, NZ qualified
-                    installer.</p>
-            </div>
-        </div>
-    </div>
-
-    <!--Reviews app-->
-    <div class="container-xl border border-dark">
-        <div class="display-5" id="reviews">Reviews app</div>
-    </div>
-
-    <!--TO DO: Footer-->
-    <div class="jumbotron jumbotron-fluid text-center p-3">
-        <h2 class="p-3 mb-3">Footer</h2>
-        <!--<div class="col-sm-4 border border-success">Warm Up NZ</div>
-            div class="col-sm-8">
-            <div class="row">
-                <div class="col-sm-4">Home</div>
-                <div class="col-sm-4">Our Brands</div>
-                <div class="col-sm-4">Contact Us</div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">About Us</div>
-                <div class="col-sm-4">Our Products</div>
-                <div class="col-sm-4 border border-secondary">FaceBook icon</div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">Our Partners</div>
-                <div class="col-sm-4">Supply and Install</div>
-                <div class="col-sm-4 border border-secondary">FaceBook icon</div>
-            </div>
-        </div>
-    </div>-->
-        <div class="row p-4">
-            <div class="col-sm-3 border border-success">Warm Up NZ</div>
-
-            <div class="col-sm-6">
-                <div class="row">
-                    <div class="col-sm-6"><a href="#">Home</a></div>
-                    <div class="col-sm-6"><a href="#brands">Brands</a></div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6"><a href="#about">About</a></div>
-                    <div class="col-sm-6">Products</div>
-                </div>
-                <!--CUSTOMERS?-->
-                <div class="row">
-                    <div class="col-sm-6"><a href="#partners">Partners</a></div>
-                    <div class="col-sm-6"><a href="#supply">Supply&#38;Install</a></div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="col-sm-6" id="ftcontact">Contact</div>
-                <!--button-->
-                <div class="col-sm-6" id="social">FaceBook</div>
-                <!--fav icon-->
-            </div>brands
-        </div>
-        <div class="row pt-5">
-            <p class="text-info text-dark-50 text-monospace mx-auto"><small>2018-2021 InsulationYOURway™. All rights
-                    reserved.</small>
-            </p>
-        </div>
-    </div>
-
-</html>
