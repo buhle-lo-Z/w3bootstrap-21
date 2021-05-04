@@ -20,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!--<script src="w3b.js"></script>-->
+    <script src="w3b.js"></script>
 </head>
 <!--
     NOTES:
@@ -70,6 +70,7 @@
                             Products
                         </a>
                         <div class="dropdown-menu">
+                            <!--Learning to use Modals-->
                             <a class="dropdown-item" href="#ceilingIns">Ceiling Insulation</a>
                             <a class="dropdown-item" href="#underfloorIns">Underfloor Insulation</a>
                             <a class="dropdown-item" href="#imgToshiba">Heat Pumps</a>
@@ -288,61 +289,344 @@
         </div>
     </div>
 
-    <!--images DONE: Our Brands Section. TO DO: IMAGE LINKS-->
+    <!--TO DO: IMAGE LINKS: Our Brands Section-->
     <div class="container-xl text-center py-3" id="brands">
-        <!--<div class="container-xl"></div>row
-            <div class="col-sm-6">-->
         <h2 class="p-3 mb-3">Our Brands</h2>
         <div class="card-columns">
             <div class="card-body">
-                <a href="javascript:void(0)" onclick="displayNotes('Bradford')">
+                <!--trigger the modal-->
+                <a href="#goldModal" data-toggle="modal" data-change="#img01">
                     <picture>
                         <source type="image/webp" srcset="images/bradfordgoldOri_1133colorspace.webp">
                         <source type="image/jpeg" srcset="images/bradfordgoldOri_1133colorspace.jpg">
-                        <img src="images/bradfordgoldOri_1133.jpg" alt="Bradford CEILING insulation"
+                        <img src="images/bradfordgoldOri_1133.jpg" alt="BradfordGold CEILING insulation"
                             class="img-fluid img-thumbnail rounded" id="imgBradford">
                     </picture>
                 </a>
+                <div class="card-body">
+                    <a href="#mothModal" data-toggle="modal" data-change="#img02">
+                        <picture>
+                            <source type="image/webp" srcset="images/MammothW_1500.webp">
+                            <source type="image/jpeg" srcset="images/MammothW_1500.jpg">
+                            <img src="images/MammothW_1500.jpg" alt="Mammoth UNDERFLOOR insulation"
+                                class="img-fluid img-thumbnail rounded" id="imgMammoth">
+                        </picture>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="#ventModal" data-toggle="modal" data-change="#img03">
+                        <picture>
+                            <source type="image/webp" srcset="images/SmartVentTagLineOri_1478.webp">
+                            <source type="image/jpeg" srcset="images/SmartVentTagLineOri_1478.jpg">
+                            <img src="images/SmartVentTagLineOri_1478.jpg" alt="SmartVent VENTILATION"
+                                class="img-fluid img-thumbnail rounded" id="imgSmartVent">
+                        </picture>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="#shibaModal" data-toggle="modal" data-change="#img04">
+                        <picture>
+                            <source type="image/webp" srcset="images/Toshiba_1500.webp">
+                            <source type="image/jpeg" srcset="images/Toshiba_1500.jpg">
+                            <img src="images/Toshiba_1500.jpg" alt="Toshiba heat pump"
+                                class="img-fluid img-thumbnail rounded" id="imgToshiba">
+                        </picture>
+                    </a>
+                </div>
+
+                <!--the MODAL-->
+                <div class="modal" id="goldModal" aria-hidden="true" aria-labelledby="goldModalLabel" tabindex="-1"
+                    role="dialog">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                        <!--modal content - the image -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!--<h5 class="modal-title" id="brandAlt">BradfordGold CEILING insulation</h5>-->
+                                <div class="modal-title" id="brandAlt">
+                                    <!--using img's alt-->
+                                    <!--the close button-->
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Modal Caption (Image Text) -->
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row d-flex">
+                                        <div class="col-md-4">
+                                            <picture>
+                                                <source type="image/webp" srcset="images/ceiling_oriDimensions.webp">
+                                                <source type="image/jpeg" srcset="images/ceiling_oriDimensions.jpg">
+                                                <img src="images/ceiling_oriDimensions.jpg"
+                                                    alt="Installing ceiling insulation"
+                                                    class="img-fluid img-thumbnail rounded" id="imgCeiling"
+                                                    style="width:100%">
+                                            </picture>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="align-content-around">Our recommended product for ceiling the roof
+                                                is from
+                                                Bradford. It will reduce heat lost through
+                                                roof which, in an uninsulated house, can be up to 40%!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex">
+                                        <div class="col-md-4">
+                                            <picture>
+                                                <source type="image/webp" srcset="images/roof_oriDimensions.webp">
+                                                <source type="image/jpeg" srcset="images/roof_oriDimensions.jpg">
+                                                <img src="images/roof_oriDimensions.jpg"
+                                                    alt="Installing ceiling insulation" class="w3-image" id="imgRoof"
+                                                    style="width:100%">
+                                            </picture>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="align-content-around">Bradford's ceiling insulation is BRANZ
+                                                appraised and
+                                                carries a minimum 50 year warranty.
+                                                The good news continues: <em>it is effective for at least 70 years!</em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal" id="mothModal" aria-hidden="true" aria-labelledby="mothModalLabel" role="dialog"
+                    tabindex="-1">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!--<h5 class="modal-title" id="brandAlt">BradfordGold CEILING insulation</h5>-->
+                                <div class="modal-title" id="brandAlt">
+                                    <!--using img's alt-->
+                                    <!--the close button-->
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row d-flex">
+                                        <h5>Insulation Blanket Roll</h5>
+                                        <div class="col-md-4">
+                                            <picture>
+                                                <source type="image/webp" srcset="images/InsulationBlanketRoll.webp">
+                                                <source type="image/jpeg" srcset="images/InsulationBlanketRoll.jpg">
+                                                <img src="images/InsulationBlanketRoll.jpg"
+                                                    alt="Insulation Blanket Roll"
+                                                    class="img-fluid img-thumbnail rounded" id="imgInsulationRoll"
+                                                    style="width:100%">
+                                            </picture>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p>To further reduce heat loss from your home, consider installing
+                                                Mammoth's
+                                                underfloor insulation
+                                                product.</p>
+                                            <hr />
+                                            <p>It effectively seals the gaps between floors and the skirting boards.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex">
+                                        <h5>Underfloor Insulation Blanket</h5>
+                                        <div class="col-md-4">
+                                            <picture>
+                                                <source type="image/webp"
+                                                    srcset="images/UnderfloorInsulationBlanket.webp">
+                                                <source type="image/jpeg"
+                                                    srcset="images/UnderfloorInsulationBlanket.jpg">
+                                                <img src="images/UnderfloorInsulationBlanket.jpg"
+                                                    alt="Underfloor Insulation Blanket"
+                                                    class="img-fluid img-thumbnail rounded" id="imgRoof"
+                                                    style="width:100%">
+                                            </picture>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p>Older homes have suspended timber floors. This product fits snuggly
+                                                into
+                                                the required 400m space for
+                                                installation.
+                                            </p>
+                                            <hr />
+                                            <p>Newer homes may have rooms above unheated spaces, such as garages.
+                                                These
+                                                would also benefit from
+                                                installing underfloor insulation!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal" id="ventModal" aria-hidden="true" aria-labelledby="ventModalLabel" tabindex="-1"
+                    role="dialog">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                        <!--modal content - the image -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!--<h5 class="modal-title" id="brandAlt">BradfordGold CEILING insulation</h5>-->
+                                <div class="modal-title" id="brandAlt">
+                                    <!--using img's alt-->
+                                    <!--the close button-->
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Modal Caption (Image Text) -->
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row d-flex">
+                                        <h5>SmartVent Lite</h5>
+                                        <div class="col-md-4">
+                                            <picture>
+                                                <source type="image/webp" srcset="images/liteSmartVentcolorspace.webp">
+                                                <source type="image/jpeg" srcset="images/liteSmartVentcolorspace.jpg">
+                                                <img src="images/liteSmartVent.jpg" alt="SmartVent Tag Line"
+                                                    class="img-fluid img-thumbnail rounded" id="imgTagLineSV"
+                                                    style="width:100%">
+                                            </picture>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="align-content-around">
+                                                The home ventilation system from SmartVent will replace moisture-laiden
+                                                air in your home with dry,
+                                                filtered warm air from your ceiling.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex">
+                                        <h5>SmartVent Positive2</h5>
+                                        <div class="col-md-4">
+                                            <picture>
+                                                <source type="image/webp"
+                                                    srcset="images/positive2SmartVentcolorspace.webp">
+                                                <source type="image/jpeg"
+                                                    srcset="images/positive2SmartVentcolorspace.jpg">
+                                                <img src="images/positive2SmartVent.jpg" alt="Floor Heat pump console"
+                                                    class="img-fluid img-thumbnail rounded" id="imgPositiveSV"
+                                                    style="width:100%">
+                                            </picture>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="align-content-around">This makes for a healthier envirement to
+                                                live in.</p>
+                                            <hr>
+                                            <p>Keep your home well ventilated with SmartVent
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal" id="shibaModal" aria-hidden="true" aria-labelledby="shibaModalLabel" tabindex="-1"
+                    role="dialog">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+                        <!--modal content - the image -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <!--<h5 class="modal-title" id="brandAlt">BradfordGold CEILING insulation</h5>-->
+                                <div class="modal-title" id="brandAlt">
+                                    <!--using img's alt-->
+                                    <!--the close button-->
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Modal Caption (Image Text) -->
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row d-flex">
+                                        <h5>Mounted Heat Pump</h5>
+                                        <div class="col-md-4">
+                                            <picture>
+                                                <source type="image/webp" srcset="images/ToshibaHighWall.webp">
+                                                <source type="image/jpeg" srcset="images/ToshibaHighWall.jpg">
+                                                <img src="images/ToshibaHighWall.jpg" alt="Mounted Heat Pump" 
+                                                class="img-fluid img-thumbnail rounded" id="imgHighTosh"
+                                                    style="width:100%">
+                                            </picture>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="align-content-around">The energy star rated Toshiba heat pump is the most reliable heat pumps on the market.</p>
+                                            <hr>
+                                            <p>It's our brand of choice to efficiently heat and cool your home in the most cost effective way
+                                              possible.                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex">
+                                        <h5>Floor Heat Pump</h5>
+                                        <div class="col-md-4">
+                                            <picture>
+                                                    <source type="image/webp" srcset="images/croppedHeightToshibaFloor.webp">
+                                                    <source type="image/jpeg" srcset="images/croppedHeightToshibaFloor.jpg">
+                                                    <img src="images/croppedHeightToshibaFloor.jpg" alt="Floor Heat pump console" 
+                                                    class="img-fluid img-thumbnail rounded" id="imglowTosh" style="width:100%">
+                                                </picture>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="align-content-around">
+                                                This heat pump acts as a
+                  <span style="font-weight: bolder">de-humidifier</span>, reducing moisture in houses that suffer from
+                  damp and as an
+                  <span style="font-weight: bolder">air conditioner</span>, cooling your space all summer long!
+                </p>
+                <hr>
+                <p>
+                  <a href="#supply"><span class="w3-theme-action w3-text-orange w3-wide"
+                      style="font-weight:lighter">Installing</span></a>
+                  a Toshiba heat pump in your home will contribute to reducing your carbon footprint.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <a href="javascript:void(0)" onclick="displayNotes('Mammoth')">
-                    <picture>
-                        <source type="image/webp" srcset="images/MammothW_1500.webp">
-                        <source type="image/jpeg" srcset="images/MammothW_1500.jpg">
-                        <img src="images/MammothW_1500.jpg" alt="Mammoth UNDERFLOOR insulation"
-                            class="img-fluid img-thumbnail rounded" id="imgMammoth">
-                    </picture>
-                </a>
-            </div>
-            <div class="card-body">
-                <a href="javascript:void(0)" onclick="displayNotes('Smartvent')">
-                    <picture>
-                        <source type="image/webp" srcset="images/SmartVentTagLineOri_1478.webp">
-                        <source type="image/jpeg" srcset="images/SmartVentTagLineOri_1478.jpg">
-                        <img src="images/SmartVentTagLineOri_1478.jpg" alt="SmartVent VENTILATION"
-                            class="img-fluid img-thumbnail rounded" id="imgSmartVent">
-                    </picture>
-                </a>
-            </div>
-            <div class="card-body">
-                <a href="javascript:void(0)" onclick="displayNotes('Toshiba')">
-                    <picture>
-                        <source type="image/webp" srcset="images/Toshiba_1500.webp">
-                        <source type="image/jpeg" srcset="images/Toshiba_1500.jpg">
-                        <img src="images/Toshiba_1500.jpg" alt="Toshiba heat pump"
-                            class="img-fluid img-thumbnail rounded" id="imgToshiba">
-                    </picture>
-                </a>
-            </div>
+
         </div>
+
+
     </div>
+
 
     <!--DONE: Supply and Install Section container-xl-->
     <div class="jumbotron jumbotron-fluid text-center p-3" id="supply">
         <h2 class="p-3 mb-3">Supply and Install</h2>
-            <p class="text-break align-content-center">When you purchase <mark>insulation, heat pumps, or ventilation</mark>
-                from us, you are guaranteed that your insulation comes from long established NZ companies.
-            </p>
+        <p class="text-break align-content-center">When you purchase <mark>insulation, heat pumps, or
+                ventilation</mark>
+            from us, you are guaranteed that your insulation comes from long established NZ companies.
+        </p>
         <h5 class="p-3">Choose an <em>InsulationYOURWay</em> option</h5>
         <div class="row">
             <div class="col-sm-5">
@@ -362,51 +646,50 @@
     <div class="container-xl text-center p-3" id="partners">
         <h2 class="p-3 mb-3">Our Partners</h2>
         <div class="card-columns">
-                <div class="card-body">
-                    <h5 class="card-title text-center" id="millsgibbon"><strong>First
-                            National&#8208;Mills&amp;Gibbon</strong>
-                    </h5>
-                    <p class="card-text justify-content-center" id="toolong1">
-                        We install insulation, heat pumps and bathroom fans in their rental properties
-                    </p>
-                </div>
-                <div class="card-body">
-                    <picture>
-                        <source type="image/webp" srcset="images/Metcalfe_1800.webp">
-                        <source type="image/jpeg" srcset="images/Metcalfe_1800.jpg">
-                        <img srcset="
+            <div class="card-body">
+                <h5 class="card-title text-center" id="millsgibbon"><strong>First
+                        National&#8208;Mills&amp;Gibbon</strong>
+                </h5>
+                <p class="card-text justify-content-center" id="toolong1">
+                    We install insulation, heat pumps and bathroom fans in their rental properties
+                </p>
+            </div>
+            <div class="card-body">
+                <picture>
+                    <source type="image/webp" srcset="images/Metcalfe_1800.webp">
+                    <source type="image/jpeg" srcset="images/Metcalfe_1800.jpg">
+                    <img srcset="
                                     images/MetcalfeOri_2000.jpg 2000w,
                                     images/Metcalfe_1800.jpg 1800w,
                                     images/Metcalfe_1500.jpg 1500w,
                                     images/Metcalfe_1000.jpg 1000w
                                     " src="images/Metcalfe_1800.jpg" sizes="(max-width: 320px) 50vw, 
                                     (min-width: 321px) and (max-width: 960px) calc(30vw - 40px), 100vw"
-                            alt="business partner Metcalfe" class="img-fluid img-thumbnail rounded" id="imgMetcalfe"
-                            style="width:100%;">
-                    </picture>
-                </div>
-                <div class="card-body">
-                    <picture>
-                        <source type="image/webp" srcset="images/HarcourtsOri_1183.webp">
-                        <source type="image/jpeg" srcset="images/HarcourtsOri_1183.jpg">
-                        <img srcset="
+                        alt="business partner Metcalfe" class="img-fluid img-thumbnail rounded" id="imgMetcalfe"
+                        style="width:100%;">
+                </picture>
+            </div>
+            <div class="card-body">
+                <picture>
+                    <source type="image/webp" srcset="images/HarcourtsOri_1183.webp">
+                    <source type="image/jpeg" srcset="images/HarcourtsOri_1183.jpg">
+                    <img srcset="
                                     images/HarcourtsOri_1183.jpg 1183w,
                                     images/Harcourts_1000.jpg 1000w
                                     " src="images/HarcourtsOri_1183.jpg" sizes="(max-width: 320px) 50vw, 
                                     (min-width: 321px) and (max-width: 960px) calc(30vw - 40px), 100vw"
-                            alt="business partner Harcourts" class="img-fluid img-thumbnail rounded" id="imgHarcourts"
-                            style="width:100%;">
-                    </picture>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title text-center pt-3" id="mitre10"><strong>Mitre10</strong></h5>
-                    <p class="card-text justify-content-center" id="toolong2">
-                        We have a strong working relationship as a recommended installer
-                    </p>
-                </div>
-            
+                        alt="business partner Harcourts" class="img-fluid img-thumbnail rounded" id="imgHarcourts"
+                        style="width:100%;">
+                </picture>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title text-center pt-3" id="mitre10"><strong>Mitre10</strong></h5>
+                <p class="card-text justify-content-center" id="toolong2">
+                    We have a strong working relationship as a recommended installer
+                </p>
+            </div>
+
         </div>
-    </div>
     </div>
 
     <!--Reviews app-->
@@ -414,9 +697,9 @@
         <div class="display-5" id="reviews">Reviews app</div>
     </div>
 
-    <!--TO DO: Footer-->
+    <!--DONE: Footer TO DO: links-->
     <div class="jumbotron jumbotron-fluid text-center pt-5">
-         <!--<h2 class="p-3 ">Footer</h2>
+        <!--<h2 class="p-3 ">Footer</h2>
        <div class="col-sm-4 border border-success">Warm Up NZ</div>
             div class="col-sm-8">
             <div class="row">
@@ -441,8 +724,8 @@
                 <picture>
                     <source type="image/webp" srcset="images/warmupNZori.webp">
                     <source type="image/jpeg" srcset="images/warmupNZori.jpg">
-                    <img src="images/warmupNZori.jpg" alt="Warm Up NZ"
-                        class="img-fluid img-thumbnail rounded pt-3" id="imgWarmUp">
+                    <img src="images/warmupNZori.jpg" alt="Warm Up NZ" class="img-fluid img-thumbnail rounded pt-3"
+                        id="imgWarmUp">
                 </picture>
             </div>
             <div class="col-sm-6">
@@ -473,46 +756,6 @@
             </p>
         </div>
     </div>
+</body>
 
 </html>
-
-
-
-<!--TO DO: Our Partners Section
-        
-        </div>
-        <div class="w3-half w3-mobile s3 w3-panel w3-round-large w3-theme-d3">
-          <h3 id="millsgibbon" class="w3-larger w3-wide w3-text-white"><strong>First National &#8208;
-              Mills&amp;Gibbon</strong></h3>
-          <hr>
-          <div class="w3-container">
-            <p class="w3-center w3-mobile w3-text-orange" id="toolong1">
-              We install insulation, heat pumps and bathroom fans in their rental properties
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="w3-row-padding w3-padding-large w3-theme-light">
-        <div class="w3-half w3-mobile s3 w3-panel w3-round-large w3-padding-bottom">
-          
-        </div>
-        <div class="w3-half w3-mobile s3 w3-panel w3-round-large w3-theme-d3 w3-padding-bottom">
-          
-          <div class="w3-container">
-            
-          </div>
-        </div>
-      </div>
-    
-    
-    <div class="container-xl text-center p-3 border border-danger" id="partners">
-        <h2 class="p-3 mb-3">Our Partners</h2>
-        <div class="row">
-            <div class="col-sm-8">Metcalfe Real Estate</div>
-            <div class="col-sm-4">First NatGibbon</div>
-        </div>
-        <div class="row">
-            <div class="col-sm-8">Harcourts</div>
-            <div class="col-sm-4">Mitre10</div>
-        </div>
-    </div>-->
