@@ -4,7 +4,9 @@ $(window).on("resize", function() {
   $("#heroLocation").css({ height: $(window).height() + "px" });
 });
 
-$('#brandModal').on('show.bs.modal', function (event) { // or is it: 'shown.bs.modal'
+
+/* ATTEMPTING https://getbootstrap.com/docs/4.4/components/modal/#varying-modal-content
+$('#brandModal').on('show.bs.modal', function (event) { // Occurs when the modal is about to be shown vs shown == Occurs when the modal is fully shown
   var image = $(event.relatedTarget) // image that triggered the modal
   var diffContent = image.data('change') // Extract info from data-* attributes
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
@@ -14,8 +16,10 @@ $('#brandModal').on('show.bs.modal', function (event) { // or is it: 'shown.bs.m
   modal.find('.modal-title').text(this.alt);
   modal.find('.modal-content source').val(diffContent);
 })
+*/
 
-/*function imgModal(){
+
+/* function imgModal(){
 // Get the modal
 var modal = document.getElementById("brandModal");
 
