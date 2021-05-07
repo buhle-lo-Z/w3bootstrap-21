@@ -1,8 +1,31 @@
-$("#heroLocation").css({ height: $(window).height() + "px" });
+/* create an <h4>Products<h4>element when you click on Products*/
+$(addH4);
+document.body.onload = addH4;
 
-$(window).on("resize", function() {
-  $("#heroLocation").css({ height: $(window).height() + "px" });
-});
+function addH4() {
+  // const newdiv = document.createElement("div");
+  // create new H4 element
+  const newH4 = document.createElement("h4");
+  // add content of h4 element
+  const h4Tittle = document.createTextNode("Products");
+  // put the contents/text node to newly created h4 element
+  newH4.appendChild(h4Tittle);
+  // put h4 inside newdiv
+  //newdiv.appendChild(newH4);
+  // add both new h4 element & its content to the DOM
+  const b4ImgCards = document.getElementById("colCards");
+  document.body.insertBefore(newdH4, b4ImgCards); 
+}
+
+// Auto update Copyright year ref: https://m.accessc.som/articles.copyright-year-update.html
+function updateDt() {
+  var today = new Date();
+  return today.getFullYear();
+}
+// Display Copyright year each new Gregorian calendar year i.e. on New Year's day
+function updateCopyRight(){
+  document.getElementById("copyRite").innerHTML = "&copy;" + updateDt(); // print copyright date
+}
 
 
 /* ATTEMPTING https://getbootstrap.com/docs/4.4/components/modal/#varying-modal-content

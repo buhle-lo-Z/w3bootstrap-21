@@ -1,5 +1,45 @@
 @charset "UTF-8";
-/*@import url(//fonts.googleapis.com/css?family=Open+Sans);*/
+
+/* MIGHT NEED THIS - TO CONTROL OVERFLOW OF ELEMENTS INSIDE OF CONTAINER
+  .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+  }*/
+  
+:root{
+  --main-bg-color: #ffffff;
+  --mybackground-color: hsla(45, 100%, 50%, 0.1);
+  --myh2-color: #ffa500;
+  --myh5-color: #f74200;
+  --mytext-color: #ff4500;
+  --myfont-size: calc(1em + 1vw);  
+  --myline-height: 1.6em;
+}
+
+html {
+  background-color: var(--mybackground-color);
+  /* font-size: var(--myfont-size);*/
+}
+h2 {
+  color: var(--myh2-color); /* orange */
+}
+
+h5 {
+  color: var(--myh5-color);
+}
+h6 { color: var(--mytext-color); }
+
+footer { font-size: 0.8em; padding: 1rem; }
+/*
+p {
+  font-size: var(--myfont2-size);
+}
+
+ FROM w3css-18 .css FILE
+
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/css?family=Open+Sans);*
 
 #heroLocation {
     color: white;
@@ -11,7 +51,7 @@
     width:auto;
   }
 
-  /* MIGHT NEED THIS - TO CONTROL OVERFLOW OF ELEMENTS INSIDE OF CONTAINER*/ 
+  * MIGHT NEED THIS - TO CONTROL OVERFLOW OF ELEMENTS INSIDE OF CONTAINER*
   .clearfix::after {
   content: "";
   clear: both;
@@ -19,67 +59,44 @@
   }
   
     
-  /* Make the image fully responsive */
+  * Make the image fully responsive *
     .carousel-inner #testimonial {
       width: 100%;
       height: 100%;
     }
-/* asterix represents all HTML elements */
+* asterix represents all HTML elements *
 *{
     margin: 0;
-    /*height: auto;
+    *height: auto;
     width: 100%;
      background-color: hsla(45, 100%, 50%, 0.1);
      font-size: 1.05em;
-    font-family: Verdana, sans-serif; */
+    font-family: Verdana, sans-serif; *
     
 }
-/* So if you want pretty small text on small screens, 
+* So if you want pretty small text on small screens, 
 you might choose 0.85em as your bottom-out value. 
 And if you want it to grow really big with big screens, 
-you could add 2vw instead of just 1*/
+you could add 2vw instead of just 1*
 html {
-  /*Base font: The general rule is, use em for overriding other font-sizes in a relative way, but only when necessary.*/
- /* em's are approximately the size of the letter “m” in the current font!*/
-  font-size: calc(1em + 1vw); /*well worth it!*/
+  *Base font: The general rule is, use em for overriding other font-sizes in a relative way, but only when necessary.*
+ * em's are approximately the size of the letter “m” in the current font!*
+  font-size: calc(1em + 1vw); *well worth it!*
 }
 
 
-html, body { /*, #partners, #cta font-size: 1.10em; */
+html, body { *, #partners, #cta font-size: 1.10em; *
     height: 100%;
     font-family: Verdana, sans-serif;
     font-size: 22px; 
 }
 
-/* START Ref: https://bits.theorem.co/css-pro-tips-responsive-font-sizes-and-when-to-use-which-units/*/
+* START Ref: https://bits.theorem.co/css-pro-tips-responsive-font-sizes-and-when-to-use-which-units/*
 h1 { font-size: 2em }
 h2 { font-size: 1.5em }
 button { font-size: inherit; font-family: inherit; }
 input { font-size: inherit; font-family: inherit; }
 footer { font-size: 0.8em; padding: 1rem; }
-/* END Ref: https://bits.theorem.co/css-pro-tips-responsive-font-sizes-and-when-to-use-which-units/*/
+* END Ref: https://bits.theorem.co/css-pro-tips-responsive-font-sizes-and-when-to-use-which-units*
+*/
 
-
-/*from signage board*/
-.w3-theme-l5 {color:#000 !important; background-color:#fbfcfc !important}
-.w3-theme-l4 {color:#000 !important; background-color:#f3f4f6 !important}
-.w3-theme-l3 {color:#000 !important; background-color:#e6e9ed !important}
-.w3-theme-l2 {color:#000 !important; background-color:#dadee4 !important}
-.w3-theme-l1 {color:#000 !important; background-color:#ced3db !important}
-.w3-theme-d1 {color:#000 !important; background-color:#aab4c0 !important}
-.w3-theme-d2 {color:#fff !important; background-color:#939faf !important}
-.w3-theme-d3 {color:#fff !important; background-color:#7c8b9e !important}
-.w3-theme-d4 {color:#fff !important; background-color:#67768b !important}
-.w3-theme-d5 {color:#fff !important; background-color:#566374 !important}
-
-.w3-theme-light {color:#000 !important; background-color:#fbfcfc !important}
-.w3-theme-dark {color:#fff !important; background-color:#566374 !important}
-.w3-theme-action {color:#fff !important; background-color:#566374 !important}
-
-.w3-theme {color:#000 !important; background-color:#c1c8d1 !important}
-.w3-text-theme {color:#c1c8d1 !important}
-.w3-border-theme {border-color:#c1c8d1 !important}
-
-.w3-hover-theme:hover {color:#000 !important; background-color:#c1c8d1 !important}
-.w3-hover-text-theme:hover {color:#c1c8d1 !important}
-.w3-hover-border-theme:hover {border-color:#c1c8d1 !important} 
