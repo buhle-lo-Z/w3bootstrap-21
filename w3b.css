@@ -13,16 +13,17 @@
   --myh2-color: #ffa500;
   --myh5-color: #f74200;
   --mytext-color: #ff4500;
-  --myfont-size: calc(1em + 1vw);  
+  --myfont-size: calc(1em + 0.6vw);  
   --myline-height: 1.6em;
 }
 
 html {
   background-color: var(--mybackground-color);
-  /* font-size: var(--myfont-size);*/
+  font-size: var(--myfont-size);
 }
 h2 {
   color: var(--myh2-color); /* orange */
+  margin-bottom: 1em;
 }
 
 h5 {
@@ -31,6 +32,7 @@ h5 {
 h6 { color: var(--mytext-color); }
 
 footer { font-size: 0.8em; padding: 1rem; }
+
 /*
 p {
   font-size: var(--myfont2-size);

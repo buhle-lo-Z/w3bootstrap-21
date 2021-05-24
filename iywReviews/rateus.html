@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rate Insulation Your Way</title>
+
+    <!-- download W3.CSS version 4.13 -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- To use jquery without downloading and hosting jQuery myself
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--external stylesheet-->
+    <link rel="stylesheet" href="css/rateus.css">
+
+    <!--external javascript file-->
+    <!--<script src="rateDb.js" defer></script>-->
+    <script src="js/rateus.js" defer></script>
+
+    <!--<script src="https://github.com/fent/randexp.js/releases/download/v0.4.3/randexp.min.js"></script>-->
+
+    <!--The 1st star clicked on shows the invoice bit. If change of mind, clears, then shows invoice again withs next click-->
+    <!--<script> DOESN'T WORK
+        $(document).ready(function(){ // execute a function when the document is fully loaded
+          $("span").click(function(){ // assign click event on the span elements
+          // DEFINE WHAT HAPPENS WHEN CLICKED - hide the first star clicked on BUT I WANT THE INDEX OF THE STAR TO SHOW
+            //$(".star:first").hide(); - WORKS
+            // $(".star:first").starClickedOn(); // get the very 1st star class that is actually clicked on, & show its position of the star clicked on
+            $(".star").first().starClickedOn();
+            //$(".star").first().hide(); - WORKS
+          }); // The first() method returns the first element of the specified elements
+        });
+    </script>-->
+    <!--A callback function is executed after the current effect is finished. Typical syntax: $(selector).hide(speed,callback);-->
+
+    <script>
+        $(document).ready(function () {
+            // When page loads, hide the invoice form           
+            $('#bodyInvoice').hide(0, starClickedOn);
+            // REF: https://api.jquery.com/one 
+            // DISPLAY INVOICE FORM WHEN THE VERY 1ST OR EACH STAR IS CLICKED i.e. Tie a one-time click to each star AMEN!!
+            $("#starPos").one("click", showInvoice).index($(".star"));
+        });
+    </script>
+
+
+    <!--[if IE]>
+    <div id="demo">
+     <p>For the best experience please open using Chrome, Firefox or Safari
+     </p></div>
+    <![endif]-->
+    <!-- enable IE8 & earlier to style unknown elements, use "the shiv" - HTML5 Enabling Javascript by Sjoerd Visscher -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+    </script>
+    <![endif]-->
+    <!-- [if lt IE 9]>
+     <script>
+      document.createElement("article");
+      document.createElement("aside");
+      document.createElement("footer");
+      document.createElement("header");
+      document.createElement("main");
+      document.createElement("nav");
+      document.createElement("section");
+     </script>
+    <![endif] -->
+</head>
+
+<body>
+    <header>
+        <h1>Reviewing IYW</h1>
+    </header>
+    <aside>
+        <h3>Please rate us</h3>
+        <!-- WHEN the 1st STAR IS CLICKED, SHOW INVOICES SECTION - runs only once, the 1st time. after that, resets, clears & show section again -->
+        <div class="stars" id="starPos" data-rating="3">
+            <span class="star">&nbsp;</span>
+            <span class="star">&nbsp;</span>
+            <span class="star">&nbsp;</span>
+            <span class="star">&nbsp;</span>
+            <span class="star">&nbsp;</span>
+        </div>
+    </aside>
+    <main id="bodyInvoice">
+        <section class="invoiceNo-display">
+            <h2>Invoices</h2>
+            <!--<button id="randomInvNo" onclick="generateRandomInvNo()"></button>
+            <p id="demo"></p>-->
+            <ul>
+                <!-- dipslays the FOUND Invoice No ... OR not-->
+            </ul>
+        </section>
+        <section class="new-review">
+            <h2>Enter your Invoice Number</h2>
+            <form>
+                <div>
+                    <label for="invoice">Invoice No</label>
+                    <input id="invoice" type="text" required>
+                </div>
+                <div>
+                    <button>Search</button> <!-- search DB for an invoiceNo matching that sent in-->
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div id="result">
+            <p>Thank you</p> <!--for sharing your review. We apprecite it.-->
+        </div>
+    </footer>
+
+    <!--************REF: Rating Systems in HTML, CSS and JS. Steve Griffith Mae 13 2018 YouTube ***********-->
+    <script>
+        // initial setup shows 3/5 stars
+        document.addEventListener('DOMContentLoaded', function () {
+            let stars = document.querySelectorAll('.star');
+            // loop through stars container
+            stars.forEach(function (star) {
+                star.addEventListener('click', setRating);
+            }); // loop ends
+
+            let rating = parseInt(document.querySelector('.stars').getAttribute('data-rating'));
+            let target = stars[rating - 1];
+            target.dispatchEvent(new MouseEvent('click'));
+        });
+
+        function setRating(ev) {
+            let span = ev.currentTarget; // the span that was just clicked
+            let stars = document.querySelectorAll('.star'); // browser reads from top to bottom in the file
+            let match = false; // looking for the star that was clicked
+            let num = 0;
+            /* 1st para is the changing star that's being clicked 
+                2nd para is counter of star position in span array, 0,1,2
+            */
+            stars.forEach(function (star, index) {
+                if (match) { // haven't found a match, remove the class rated
+                    star.classList.remove('rated');
+                } else {
+                    star.classList.add('rated'); // found a match, add the class rated
+                }
+                // am I looking at the span that was clicked
+                if (star === span) {
+                    match = true;
+                    // increment counter
+                    num = index + 1;
+                }
+            });
+            // show which number was clicked on
+            document.querySelector('.stars').setAttribute('data-rating', num);
+        }
+    </script>
+    
+    <!-- SHOW Invoice section -->
+    <script>
+        function showInvoice() {
+            var x = document.getElementById("bodyInvoice");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+    <!--Show position of star that was clicked on-->
+    <script>
+        function starClickedOn() {
+            var g = document.getElementById('starPos');
+            for (var i = 0, len = g.children.length; i < len; i++) {
+                (function (index) {
+                    g.children[i].onclick = function () {
+                        document.getElementById('result').innerHTML = index;                        
+                    }
+                })(i);
+            }
+        }    
+    </script>
+
+    <!--<script>
+        // Check browser support
+        if (typeof (Storage) !== "undefined") {
+            // Store
+            localStorage.setItem("lastname", "localStorage Property works!");
+            // Retrieve
+            document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+        } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+        }
+    </script>-->
+</body>
+
+</html>

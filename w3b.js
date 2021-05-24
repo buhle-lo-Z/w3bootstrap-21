@@ -28,7 +28,7 @@ function updateCopyRight(){
 }
 
 
-/* ATTEMPTING https://getbootstrap.com/docs/4.4/components/modal/#varying-modal-content
+// ATTEMPTING https://getbootstrap.com/docs/4.4/components/modal/#varying-modal-content
 $('#brandModal').on('show.bs.modal', function (event) { // Occurs when the modal is about to be shown vs shown == Occurs when the modal is fully shown
   var image = $(event.relatedTarget) // image that triggered the modal
   var diffContent = image.data('change') // Extract info from data-* attributes
@@ -39,7 +39,7 @@ $('#brandModal').on('show.bs.modal', function (event) { // Occurs when the modal
   modal.find('.modal-title').text(this.alt);
   modal.find('.modal-content source').val(diffContent);
 })
-*/
+
 
 
 /* function imgModal(){

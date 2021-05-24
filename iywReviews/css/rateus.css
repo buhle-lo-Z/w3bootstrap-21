@@ -1,0 +1,58 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+header, footer {
+  background-color: orange;
+  color: white;
+  line-height: 100px;
+  padding: 0 20px;
+}
+
+.new-review, .invoiceNo-display {
+  padding: 20px;
+}
+
+.new-review {
+  background: #ddd;
+}
+
+h1 {
+  margin: 0;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+/* stars page */
+.star{
+  color: goldenrod;
+  font-size: 1.0em;
+  padding: 0 1rem; /* space out the stars */
+}
+.star::before{
+  content: '\2606'; /* star outline */
+  cursor: pointer;
+}
+.star.rated::before{
+  /* the style for a selected star */
+  content: '\2605'; /* filled star */
+}
+/*Show number after star is clicked on*/
+.stars{
+  counter-reset: rateme 0;
+  font-size: 1.0rem;
+  font-weight: 900;
+}
+.star.rated{
+  counter-increment: rateme 1;
+}
+.stars::after{
+  content: counter(rateme) '/5'; 
+}
