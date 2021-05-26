@@ -8,8 +8,8 @@
     <title>Insulate YOUR Home&#44; YOUR Way&#44; to a Warm&#44; Dry&#44; Healthy&#44; Home&#33;</title>
     <meta name="description"
         content="Based in New Plymouth&#44; we offer FREE in-home Assessments for Insulation&#44; Heat Pumps and Home Ventilation Systems throughout Taranaki&#44; the Waikato and Manawatu&#46;">
-    
-     <!--Chosen canonical URL-->
+
+    <!--Chosen canonical URL-->
     <link rel="canonical" href="https://www.insulationyourway.co.nz/index.html" />
     <link rel="alternate" href="https://www.insulationyourway.co.nz/index.html" hreflang="en-nz" />
 
@@ -33,14 +33,14 @@
         $(document).ready(function () {
             $('[data-toggle="popover"]').popover({
                 placement: 'bottom',
-                trigger: 'hover',                
+                trigger: 'hover',
                 html: true,
                 container: 'body',
                 content:
                     '<div class="media">\
                     <img src="images/LiamBusCard.jpg" alt="Liam Business Card"\
                     class="img-fluid rounded mr-3" id="LiamBusCard">\
-                    </div>'                
+                    </div>'
             });
         });
     </script>
@@ -137,32 +137,19 @@
         gtag('config', 'UA-128180422-1');
     </script>
 </head>
-<!--
-    NOTES:
-    Bootstrap 4 uses a default font-size of 16px, and its line-height is 1.5.
-    The default font-family is "Helvetica Neue", Helvetica, Arial, sans-serif
-    In addition, all <p> elements have margin-top: 0 and margin-bottom: 1rem (16px by default).
--->
 
 <body>
     <div class="container-fluid pt-3">
-        <!-- my-3 border-->
-        <!-- width always 100%, 15px L& R padding 0px top & bottom. pt-3 adds 16px top padding-->
-
-        <!--Navigation container-md couldn't fit CTA button-->
         <nav class="jumbotron-fluid navbar navbar-expand-xl bg-light navbar-light sticky-top">
-            <!--change colours. NOTE: sticky-top in >=IE11 is treated as position:relative-->
+            <!--NOTE: sticky-top in >=IE11 is treated as position:relative-->
             <a class="navbar-brand flex-grow-1" href="#">
-                <!-- brand grows to fill available space-->
                 <img src="images/IYW2.png" alt="IYW_Logo" style="width: 18vw;">
-                <!--60px-->
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
-                    <!--d-flex flex-row justify-content-end instead of float-xl-right -->
                     <li class="nav-item active">
                         <a class="nav-link" href="#" id="hom">Home</a>
                     </li>
@@ -185,7 +172,6 @@
                             Products
                         </a>
                         <div class="dropdown-menu">
-                            <!--Learning to use Modals-->
                             <a class="dropdown-item" href="#imgBradford">Bradford Ceiling Insulation</a>
                             <a class="dropdown-item" href="#imgMammoth">Mammoth Underfloor Insulation</a>
                             <a class="dropdown-item" href="#imgToshiba">Heat Pumps</a>
@@ -202,7 +188,8 @@
                         <a class="nav-link" href="#ftContact">Contact</a>
                     </li>
                 </ul>
-                <a href="#ftcontact" class="btn btn-outline-info active text-nowrap btn-sm" data-toggle="popover">Call Now</a>
+                <a href="#ftcontact" class="btn btn-outline-info active text-nowrap btn-sm" data-toggle="popover">Call
+                    Now</a>
             </div>
         </nav>
         <br>
@@ -211,37 +198,16 @@
         <div class="container-md">
             <img class="img-fluid" src="/home/buhle/Websites/w3bootstrap-21/images/8bitHero1.png"
                 alt="on premises view">
-            <!--<p>This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>-->
         </div>
         <br>
 
         <!--TESTIMONIALS - WIP: centering of shorter quotes JUMPING-->
         <div class="container-lg text-center p-3" id="customers">
-            <!--jumbotron-->
-            <!--.js change to id-->
             <h2 class="display-4 px-3 mx-3">Customers say:</h2>
             <!--carousel-->
             <div class="row d-flex justify-content-center">
                 <div id="testimonial" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators 
-                    <ul class="carousel-indicators">
-                        <li data-target="#testimonial" data-slide-to="0" class="active"></li>
-                        <li data-target="#testimonial" data-slide-to="1"></li>
-                        <li data-target="#testimonial" data-slide-to="2"></li>
-                        <li data-target="#testimonial" data-slide-to="3"></li>
-                        <li data-target="#testimonial" data-slide-to="4"></li>
-                        <li data-target="#testimonial" data-slide-to="5"></li>
-                        <li data-target="#testimonial" data-slide-to="6"></li>
-                        <li data-target="#testimonial" data-slide-to="7"></li>
-                        <li data-target="#testimonial" data-slide-to="8"></li>
-                        <li data-target="#testimonial" data-slide-to="9"></li>
-                        <li data-target="#testimonial" data-slide-to="10"></li>
-                        <li data-target="#testimonial" data-slide-to="11"></li>
-                        <li data-target="#testimonial" data-slide-to="12"></li>
-                    </ul>-->
-                    <!-- The slideshow -->
                     <div class="carousel-inner text-center text-success">
-                        <!--clearfix-->
                         <!--adds slides to carosel-->
                         <div class="carousel-item active">
                             <!--specific content of each slide-->
@@ -366,13 +332,6 @@
                 </div>
             </div>
         </div>
-        <!-- Left and right controls
-        <a class="carousel-control-prev" href="#testimonial" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#testimonial" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a> -->
     </div>
     <br>
 
@@ -408,7 +367,6 @@
             <div class="card-body">
                 <!--trigger the modal-->
                 <a href="#goldModal" data-toggle="modal">
-                    <!--data-change="#img01"-->
                     <picture>
                         <source type="image/webp" srcset="images/bradfordgoldOri_1133colorspace.webp">
                         <source type="image/jpeg" srcset="images/bradfordgoldOri_1133colorspace.jpg">
@@ -418,7 +376,6 @@
                 </a>
                 <div class="card-body">
                     <a href="#mothModal" data-toggle="modal">
-                        <!--data-change="#img02"-->
                         <picture>
                             <source type="image/webp" srcset="images/MammothW_1500.webp">
                             <source type="image/jpeg" srcset="images/MammothW_1500.jpg">
@@ -429,7 +386,6 @@
                 </div>
                 <div class="card-body">
                     <a href="#ventModal" data-toggle="modal">
-                        <!--href="#ventModal" data-toggle="modal" data-change="#img03"-->
                         <picture>
                             <source type="image/webp" srcset="images/SmartVentTagLineOri_1478.webp">
                             <source type="image/jpeg" srcset="images/SmartVentTagLineOri_1478.jpg">
@@ -440,7 +396,6 @@
                 </div>
                 <div class="card-body">
                     <a href="#toshModal" data-toggle="modal">
-                        <!--data-change="#img04"-->
                         <picture>
                             <source type="image/webp" srcset="images/Toshiba_1500.webp">
                             <source type="image/jpeg" srcset="images/Toshiba_1500.jpg">
@@ -601,7 +556,6 @@
                 <div class="modal" id="toshModal" aria-hidden="true" aria-labelledby="toshModal" tabindex="-1"
                     role="dialog">
                     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-                        <!--modal content - the image -->
                         <div class="modal-content align-content-around">
                             <div class="modal-header">
                                 <h6 class="modal-title text-monospace">BradfordGold CEILING insulation</h6>
@@ -736,7 +690,7 @@
         <div class="display-5" id="reviews">Reviews app</div>
     </div>-->
 
-    <!--Footer TO DO: links-->
+    <!--Footer-->
     <div class="jumbotron jumbotron-fluid text-center pt-5" id="footer">
         <div class="row d-flex justify-content-center">
             <div class="col-sm-3">
@@ -755,7 +709,6 @@
                 <div class="row d-flex justify-content-sm-around p-2">
                     <div class="col-sm-6"><a href="#about">About</a></div>
                     <div class="col-sm-6"><a href="#brands">Products</a></div>
-                    <!--href="javascript:void(0)"" onclick="addH4()"-->
                 </div>
                 <div class="row d-flex justify-content-sm-around p-2">
                     <div class="col-sm-6"><a href="#partners">Partners</a></div>
@@ -766,30 +719,30 @@
                 <div class="col-sm-8" id="ftcontact">
                     <button class="active btn btn-outline-light btn-block font-weight-bold">Contact</button>
                     <div class="row d-flex" id="contact">
-                      <p class="p-2 m-2 align-content-sm-center">65 Corbett Road, Bell Block, New Plymouth</p>
+                        <p class="p-2 m-2 align-content-sm-center">65 Corbett Road, Bell Block, New Plymouth</p>
                     </div>
-                      <div class="row d-flex" id="phone">
-                      <div class="text-nowrap col-sm-12">06 281 1094</div>
-                      <div class="text-nowrap col-sm-12"> 027 581 6112</div>
+                    <div class="row d-flex" id="phone">
+                        <div class="text-nowrap col-sm-12">06 281 1094</div>
+                        <div class="text-nowrap col-sm-12"> 027 581 6112</div>
                     </div>
-                <div class="col-sm-4" id="social"> 
-                    <i onclick="window.open('https\://www.facebook.com/diyinsulationandstorageunits')"
-                        style='font-size:36px' class='fab'>&#xf09a;
-                    </i>
+                    <div class="col-sm-4" id="social">
+                        <i onclick="window.open('https\://www.facebook.com/diyinsulationandstorageunits')"
+                            style="font-size:36px;  width: 18vw;" class='fab'>&#xf09a;
+                        </i>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--Display current year-->
-        <div class="row pt-2">
-            <p class="text-info text-dark-50 text-monospace mx-auto" id="copyRite">
-                <script>updateCopyRight();</script>
-                <small>InsulationYOURway&trade;. All rights reserved.</small>
-            </p>
-        </div>
+
+            <!--Display current year-->
+            <div class="row pt-2 align-content-lg-center ">
+                <p class="text-info text-dark-50 text-monospace mx-auto" id="copyRite">
+                    <script>updateCopyRight();</script>
+                    <small>InsulationYOURway&trade;. All rights reserved.</small>
+                </p>
+            </div>
         </div>
     </div>
 
-    <!--<script>addH4();</script>-->
 </body>
 
 </html>
