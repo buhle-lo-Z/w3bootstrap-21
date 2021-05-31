@@ -27,7 +27,6 @@ function updateCopyRight(){
   document.getElementById("copyRite").innerHTML = "&copy;" + updateDt(); // print copyright date
 }
 
-
 // ATTEMPTING https://getbootstrap.com/docs/4.4/components/modal/#varying-modal-content
 $('#brandModal').on('show.bs.modal', function (event) { // Occurs when the modal is about to be shown vs shown == Occurs when the modal is fully shown
   var image = $(event.relatedTarget) // image that triggered the modal
