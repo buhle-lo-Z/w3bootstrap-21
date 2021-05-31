@@ -28,6 +28,19 @@
     <!-- Font awesome KIT CODE -->
     <script src="https://kit.fontawesome.com/a45499f320.js" crossorigin="anonymous"></script>
 
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TX3W7TB');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
     <!--business card - not showing on mobile devices-->
     <script>
         $(document).ready(function () {
@@ -127,7 +140,7 @@
      </script>
     <![endif] -->
 
-    <!-- Global site tag (gtag.js) - Google Analytics
+    <!-- Global site tag (gtag.js) - Google Analytics    google tag manager account container ID GTM-TX3W7TB 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128180422-1"></script>-->
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -139,6 +152,11 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX3W7TB" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="container-fluid pt-3">
         <nav class="jumbotron-fluid navbar navbar-expand-xl bg-light navbar-light sticky-top">
             <!--NOTE: sticky-top in >=IE11 is treated as position:relative-->
@@ -188,7 +206,8 @@
                         <a class="nav-link" href="#ftContact">Contact</a>
                     </li>
                 </ul>
-                <a href="#ftcontact" class="btn btn-outline-info active text-nowrap btn-sm" data-toggle="popover">Call
+                <a href="#ftcontact" class="call-now btn btn-outline-info active text-nowrap btn-sm"
+                    data-toggle="popover">Call
                     Now</a>
             </div>
         </nav>
@@ -331,7 +350,23 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <a class="reviews-button btn py-1 my-1" role="button" id="reviews"
+                href="https://search.google.com/local/reviews?placeid=ChIJqdsmQA1PFG0Rxn5XsPUmeaU">Leave us a Review</a>
         </div>
+        <br>
+        <!--Reviews app
+        <div class="container-xl py-5 my-5 border border-primary">
+            <div class="display-5 text-center justify-content-center" >-->
+        <!--<a href="https://www.google.com/search?q=insulation+your+way&client=ubuntu&hs=WDl&biw=1920&bih=944&ei=YpitYNSTNKW94-EPqcud-AU&gs_ssp=eJzj4tVP1zc0TM_KSLcos0w3YLRSNagwSzE0MUkzSDExMDJLSUq0tDKoSDQ1tzQySzNNMjA1N09NNvMSzswrLs1JLMnMz1OozC8tUihPrAQALBEW3w&oq=insulation+yo&gs_lcp=Cgdnd3Mtd2l6EAEYADILCC4QxwEQrwEQkwIyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADIGCAAQFhAeOgUIABCRAjoOCC4QsQMQgwEQxwEQowI6CAgAELEDEIMBOgUIABCxAzoECAAQQzoKCAAQsQMQgwEQQzoICC4QxwEQrwE6BwgAELEDEEM6BAguEEM6BQgAEMkDOgkIABBDEEYQ-QE6BAgAEApQ5iNY-DBgxz1oAHACeACAAc4BiAGmE5IBBjAuMTMuMZgBAKABAaoBB2d3cy13aXrAAQE&sclient=gws-wiz#lrd=0x6d144f0d4026dba9:0xa57926f5b0577ec6,1,,,">
+                Leave us a Review</a><br>-->
+
+
+
+        <!--<a href="https://search.google.com/local/writereview?placeid=ChIJqdsmQA1PFG0Rxn5XsPUmeaU">Write us a Review</a>
+            <br>
+            </div>
+        </div>-->
     </div>
     <br>
 
@@ -361,7 +396,7 @@
     </div>
 
     <!--Our Brands-->
-    <div class="container-xl text-center py-3" id="brands">
+    <div class="container-xl text-center py-3 my-3" id="brands">
         <h2 class="display-4 px-3 mx-3">Our Brands</h2>
         <div class="card-columns">
             <div class="card-body">
@@ -684,11 +719,6 @@
             </div>
         </div>
     </div>
-
-    <!--Reviews app
-    <div class="container-xl border border-dark py-5 my-5">
-        <div class="display-5" id="reviews">Reviews app</div>
-    </div>-->
 
     <!--Footer-->
     <div class="jumbotron jumbotron-fluid text-center pt-5" id="footer">

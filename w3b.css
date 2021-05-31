@@ -18,7 +18,7 @@
 }
 
 html {
-  background-color: var(--mybackground-color);
+  background-color: var(--main-bg--color);
   font-size: var(--myfont-size);
 }
 h2 {
@@ -30,6 +30,11 @@ h5 {
   color: var(--myh5-color);
 }
 h6 { color: var(--mytext-color); }
+
+#reviews {
+  background-color: var( --mytext-color);
+  color: var(--main-bg-color);
+}
 
 footer { font-size: 0.8em; padding: 1rem; }
 
