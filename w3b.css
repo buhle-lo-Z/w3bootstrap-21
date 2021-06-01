@@ -31,8 +31,14 @@ h5 {
 }
 h6 { color: var(--mytext-color); }
 
-#reviews {
+
+#reviews-button {
   background-color: var( --mytext-color);
+  color: var(--main-bg-color);
+}
+
+#call-button {
+  background-color: var(--myh5-color);
   color: var(--main-bg-color);
 }
 
