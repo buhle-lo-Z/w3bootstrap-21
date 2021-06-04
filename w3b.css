@@ -21,6 +21,14 @@ html {
   background-color: var(--main-bg--color);
   font-size: var(--myfont-size);
 }
+
+/* start -- content carousel jumping - WORKING!!! 
+Ref: https://stackoverflow.com/questions/28589911/bootstrap-change-carousel-height*/
+.carousel-item {
+  height: 300px;
+}
+/* end -- content carousel jumping!! */
+
 h2 {
   color: var(--myh2-color); /* orange */
   margin-bottom: 1em;
@@ -30,6 +38,7 @@ h5 {
   color: var(--myh5-color);
 }
 h6 { color: var(--mytext-color); }
+
 
 
 #reviews-button {
