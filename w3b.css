@@ -22,6 +22,10 @@ html {
   font-size: var(--myfont-size);
 }
 
+/*.display-4 {
+  white-space: nowrap;
+}*/
+
 /* start -- content carousel jumping - WORKING!!! 
 Ref: https://stackoverflow.com/questions/28589911/bootstrap-change-carousel-height*/
 .carousel-item {
@@ -39,8 +43,6 @@ h5 {
 }
 h6 { color: var(--mytext-color); }
 
-
-
 #reviews-button {
   background-color: var( --mytext-color);
   color: var(--main-bg-color);
@@ -51,23 +53,29 @@ h6 { color: var(--mytext-color); }
   color: var(--main-bg-color);
 }
 
-/* #back2top {
+@media only screen and (max-width: 360px) {
+  #navLogo {
+      width: 100%;
+    }
+}
+
+#back2top {
   display: inline-block; 
   position: fixed;
   bottom: 60px;
-  left: inherit; *-calc(542 / 980 * 100%)*
+  left: inherit; /*-calc(542 / 980 * 100%)*/
   width: 20px;
   height: 20px;
   cursor: pointer;
-  z-index: 999; 
+  z-index: 999;
+  background: rgba(86,99,116,1) url("images/up-arrow.png") no-repeat center 43%;
+  background-color: #566374; 
   color: #F56C27;
   color:  rgba(245,180,39,0.9);
-  background-color: #566374;
-  background: rgba(86,99,116,1) url("images/up-arrow.png") no-repeat center 43%;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
   border-radius: 40px;
-  }*/
+  }
 
 footer { font-size: 0.8em; padding: 1rem; }
 
