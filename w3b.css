@@ -11,6 +11,7 @@
   --main-bg-color: #ffffff;
   --mybackground-color: hsla(45, 100%, 50%, 0.1);
   --myh2-color: #ffa500;
+  --myh3-color: ;
   --myh5-color: #f74200;
   --mytext-color: #ff4500;
   --myfont-size: calc(1em + 0.6vw);  
@@ -36,6 +37,10 @@ Ref: https://stackoverflow.com/questions/28589911/bootstrap-change-carousel-heig
 h2 {
   color: var(--myh2-color); /* orange */
   margin-bottom: 1em;
+}
+
+h3 {
+  color: var(--mytext-color);
 }
 
 h5 {
