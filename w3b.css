@@ -82,6 +82,21 @@ h6 { color: var(--mytext-color); }
   border-radius: 40px;
   }
 
+.card {
+    padding: 15px;
+    height: auto;
+    display: flex;
+}
+
+.card-columns{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    overflow: hidden;
+}
+
 footer { font-size: 0.8em; padding: 1rem; }
 
 /*

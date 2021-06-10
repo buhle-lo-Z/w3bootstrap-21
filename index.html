@@ -157,27 +157,27 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-      <!--hide arrow until page is scrolled -->
-  <a href="#" class="w3-left" id="back2top"></a>
+    <!--hide arrow until page is scrolled -->
+    <a href="#" class="w3-left" id="back2top"></a>
 
-  <!-- Load & initiliaze the Facebook SDK for JavaScript -->
-  <div id="fb-root"></div>
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        xfbml: true,
-        version: 'v7.0'
-      });
-    };
+    <!-- Load & initiliaze the Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v7.0'
+            });
+        };
 
-    (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      /*js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';*/
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            /*js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';*/
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <div class="container-fluid pt-3">
         <nav class="jumbotron-fluid navbar navbar-expand-xl bg-light navbar-light sticky-top">
@@ -228,8 +228,8 @@
                         <a class="nav-link" href="#contactus">Contact</a>
                     </li>
                 </ul>
-                <a href="#ftcontact" class="call-now-button btn btn-outline-info active text-nowrap btn-sm" id="call-button"
-                    data-toggle="popover">Call Now
+                <a href="#ftcontact" class="call-now-button btn btn-outline-info active text-nowrap btn-sm"
+                    id="call-button" data-toggle="popover">Call Now
                 </a>
             </div>
         </nav>
@@ -243,14 +243,16 @@
         <br>
 
         <!--TESTIMONIALS: JUMPING !!!-->
-        <div class="container-sm text-center p-3" id="customers"><!--container-lg-->
+        <div class="container-sm text-center p-3" id="customers">
+            <!--container-lg-->
             <h2 class="text-center">Customers say:</h2>
             <!--carousel-->
             <div class="row d-flex justify-content-center">
                 <div id="testimonial" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner text-center text-success">
                         <!--adds slides to carosel-->
-                        <div class="carousel-item active"><!--specific content of each slide-->
+                        <div class="carousel-item active">
+                            <!--specific content of each slide-->
                             <div class="header-text hidden-xs">
                                 <div class="col-md-12">
                                     <blockquote class="blockquote">
@@ -406,21 +408,28 @@
     </div>
 
     <!--Our Brands-->
-    <div class="container-xl text-center py-3 my-3" id="brands">
-        <h2 class="px-3 mx-3">Our Brands</h2>
-        <div class="card-columns">
-            <div class="card-body">
-                <!--trigger the modal-->
-                <a href="#goldModal" data-toggle="modal">
-                    <picture>
-                        <source type="image/webp" srcset="images/bradfordgoldOri_1133colorspace.webp">
-                        <source type="image/jpeg" srcset="images/bradfordgoldOri_1133colorspace.jpg">
-                        <img src="images/bradfordgoldOri_1133.jpg" alt="BradfordGold CEILING insulation"
-                            class="img-fluid img-thumbnail rounded" id="imgBradford">
-                    </picture>
-                </a>
+    <div class="container-xl text-center py-3 my-3">
+        <!--id="brands"-->
+        <!--<h2 class="px-3 mx-3">Our Brands</h2>
+        <div class="card-columns">-->
+        <div class="card-group">
+            <div class="col-6">
+                <h2 class="px-3 mx-3" id="brands">Our Brands</h2>
                 <div class="card-body">
-                    <a href="#mothModal" data-toggle="modal">
+                    <!--trigger the modal
+                <a href="#goldModal" data-toggle="modal">-->
+                    <a href="insulation.html#roof_ceiling">
+                        <picture>
+                            <source type="image/webp" srcset="images/bradfordgoldOri_1133colorspace.webp">
+                            <source type="image/jpeg" srcset="images/bradfordgoldOri_1133colorspace.jpg">
+                            <img src="images/bradfordgoldOri_1133.jpg" alt="BradfordGold CEILING insulation"
+                                class="img-fluid img-thumbnail rounded" id="imgBradford">
+                        </picture>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <!--<a href="#mothModal" data-toggle="modal">-->
+                    <a href="insulation.html#underfloor">
                         <picture>
                             <source type="image/webp" srcset="images/MammothW_1500.webp">
                             <source type="image/jpeg" srcset="images/MammothW_1500.jpg">
@@ -430,7 +439,8 @@
                     </a>
                 </div>
                 <div class="card-body">
-                    <a href="#ventModal" data-toggle="modal">
+                    <!--<a href="#ventModal" data-toggle="modal">-->
+                    <a href="ventilation.html">
                         <picture>
                             <source type="image/webp" srcset="images/SmartVentTagLineOri_1478.webp">
                             <source type="image/jpeg" srcset="images/SmartVentTagLineOri_1478.jpg">
@@ -440,7 +450,8 @@
                     </a>
                 </div>
                 <div class="card-body">
-                    <a href="#toshModal" data-toggle="modal">
+                    <!--<a href="#toshModal" data-toggle="modal">-->
+                    <a href="heatpump.html">
                         <picture>
                             <source type="image/webp" srcset="images/Toshiba_1500.webp">
                             <source type="image/jpeg" srcset="images/Toshiba_1500.jpg">
@@ -449,12 +460,60 @@
                         </picture>
                     </a>
                 </div>
-
-                <!--the MODALS-->
+            </div>
+        </div>
+        <div class="card-group"> <!--ADJACENT-->
+            <div class="col-6">
+                <h2 class="px-3 mx-3" id="partners">Our Partners</h2>
+                <div class="card-body">
+                    <h5 class="card-title text-center" id="millsgibbon"><strong>First
+                            National&#8208;Mills&amp;Gibbon</strong>
+                    </h5>
+                    <p class="card-text justify-content-center" id="toolong1">
+                        We install insulation, heat pumps, bathroom fans in rental properties
+                    </p>
+                </div>
+                <div class="card-body">
+                    <picture>
+                        <source type="image/webp" srcset="images/Metcalfe_1800.webp">
+                        <source type="image/jpeg" srcset="images/Metcalfe_1800.jpg">
+                        <img srcset="
+                                    images/MetcalfeOri_2000.jpg 2000w,
+                                    images/Metcalfe_1800.jpg 1800w,
+                                    images/Metcalfe_1500.jpg 1500w,
+                                    images/Metcalfe_1000.jpg 1000w
+                                    " src="images/Metcalfe_1800.jpg" sizes="(max-width: 320px) 50vw, 
+                                    (min-width: 321px) and (max-width: 960px) calc(30vw - 40px), 100vw"
+                            alt="business partner Metcalfe" class="img-fluid img-thumbnail rounded" id="imgMetcalfe"
+                            style="width:100%;">
+                    </picture>
+                </div>
+                <div class="card-body">
+                    <picture>
+                        <source type="image/webp" srcset="images/HarcourtsOri_1183.webp">
+                        <source type="image/jpeg" srcset="images/HarcourtsOri_1183.jpg">
+                        <img srcset="
+                                    images/HarcourtsOri_1183.jpg 1183w,
+                                    images/Harcourts_1000.jpg 1000w
+                                    " src="images/HarcourtsOri_1183.jpg" sizes="(max-width: 320px) 50vw, 
+                                    (min-width: 321px) and (max-width: 960px) calc(30vw - 40px), 100vw"
+                            alt="business partner Harcourts" class="img-fluid img-thumbnail rounded" id="imgHarcourts"
+                            style="width:100%;">
+                    </picture>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center" id="mitre10"><strong>Mitre10</strong></h5>
+                    <p class="card-text justify-content-center" id="toolong2">
+                        We have a strong working relationship as a recommended installer
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--the MODALS--
                 <div class="modal" id="goldModal" aria-hidden="true" aria-labelledby="goldModal" tabindex="-1"
                     role="dialog">
                     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-                        <!--modal content - the image -->
+                        --modal content - the image --
                         <div class="modal-content align-content-around">
                             <div class="modal-header">
                                 <h6 class="modal-title text-monospace">BradfordGold CEILING insulation</h6>
@@ -464,7 +523,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <!-- Modal Caption (Image Text) -->
+                            -- Modal Caption (Image Text) --
                             <div class="modal-body">
                                 <div class="container-fluid p-2">
                                     <picture>
@@ -550,18 +609,18 @@
                 <div class="modal" id="ventModal" aria-hidden="true" aria-labelledby="ventModal" tabindex="-1"
                     role="dialog">
                     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
-                        <!--modal content - the image -->
+                        --modal content - the image --
                         <div class="modal-content align-content-around">
                             <div class="modal-header">
                                 <h6 class="modal-title text-monospace">BradfordGold CEILING insulation</h6>
                                 <div class="modal-title">
-                                    <!--the close button-->
+                                    --the close button--
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                             </div>
-                            <!-- Modal Caption (Image Text) -->
+                            -- Modal Caption (Image Text) --
                             <div class="modal-body">
                                 <div class="container-fluid p-2">
                                     <picture>
@@ -610,7 +669,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <!-- Modal Caption (Image Text) -->
+                             -- Modal Caption (Image Text) --
                             <div class="modal-body">
                                 <div class="container-fluid p-2">
                                     <picture>
@@ -658,30 +717,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <!--Supply and Install-->
-    <div class="jumbotron jumbotron-fluid text-center p-3" id="supply">
-        <h2 class="px-3 mx-3">Supply and Install</h2>
-        <p class="text-break align-content-center">When you purchase <mark>insulation, heat pumps, or
-                ventilation</mark>
-            from us, you are guaranteed that your insulation comes from long established NZ companies.
-        </p>
-        <h5 class="pt-3">Choose an <em>InsulationYOURWay</em> option</h5>
-        <div class="row">
-            <div class="col-sm-5">
-                <h6 class="p-3"><strong><em>Supply Only&#58;</em></strong></h6>
-                <p class="pb-sm3">Pick up and install <strong>yourself.</strong></p>
-            </div>
-            <div class="col-sm-7">
-                <h6 class="p-3"><strong><em>Supply and Install&#58;</em></strong></h6>
-                <p class="mb-sm3"><strong>We</strong> install for you, using our ECCA recognised, NZ qualified
-                    installer.</p>
-            </div>
-        </div>
-    </div>
-
-    <!--Partners-->
+        <!--Partners--
     <div class="container-xl text-center p-3" id="partners">
         <h2 class="px-3 mx-3">Our Partners</h2>
         <div class="card-columns">
@@ -728,9 +766,32 @@
                 </p>
             </div>
         </div>
+    </div>-->
+
+        <!--Supply and Install-->
+    <div class="jumbotron jumbotron-fluid text-center p-3" id="supply">
+        <h2 class="px-3 mx-3">Supply and Install</h2>
+        <p class="text-break align-content-center">When you purchase <mark>insulation, heat pumps, or
+                ventilation</mark>
+            from us, you are guaranteed that your insulation comes from long established NZ companies.
+        </p>
+        <h5 class="pt-3">Choose an <em>InsulationYOURWay</em> option</h5>
+        <div class="row">
+            <div class="col-sm-5">
+                <h6 class="p-3"><strong><em>Supply Only&#58;</em></strong></h6>
+                <p class="pb-sm3">Pick up and install <strong>yourself.</strong></p>
+            </div>
+            <div class="col-sm-7">
+                <h6 class="p-3"><strong><em>Supply and Install&#58;</em></strong></h6>
+                <p class="mb-sm3"><strong>We</strong> install for you, using our ECCA recognised, NZ qualified
+                    installer.</p>
+            </div>
+        </div>
     </div>
 
-    <!--Footer-->
+
+
+        <!--Footer--
     <div class="jumbotron jumbotron-fluid text-center pt-5" id="footer">
         <div class="row d-flex justify-content-center">
             <div class="col-sm-3">
@@ -757,7 +818,7 @@
             </div>
             <div class="col-sm-3">
                 <div class="col-sm-8" id="ftcontact">
-                    <button class="active btn btn-outline-light font-weight-bold">Contact</button><!--btn-block-->
+                    <button class="active btn btn-outline-light font-weight-bold">Contact</button>
                     <div class="row d-flex" id="contactus">
                         <p class="p-2 m-2 align-content-sm-center">65 Corbett Road, Bell Block, New Plymouth</p>
                     </div>
@@ -773,7 +834,7 @@
                 </div>
             </div>
 
-            <!--Display current year-->
+            !--Display current year--
             <div class="row pt-2 align-content-lg-center ">
                 <p class="text-info text-dark-50 text-monospace mx-auto" id="copyRite">
                     <script>updateCopyRight();</script>
@@ -781,7 +842,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </div>-->
 
 </body>
 
