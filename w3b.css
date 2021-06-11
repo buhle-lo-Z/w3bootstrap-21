@@ -71,9 +71,11 @@ h6 { color: var(--mytext-color); }
       width: 100%;
     }
 }
-@media (min-height: 300px), screen and (orientation: portrait) { 
-  #underfloor_blanket {
-    padding: 0%;
+
+@media only screen and (max-width: 812px) and (orientation: landscape) { /*(min-width: 568px) and , screen (orientation: portrait)*/
+  #toolong1 #toolong2 {
+    font-size-adjust: smaller;
+    white-space: pre-line;
   }
 }
 
